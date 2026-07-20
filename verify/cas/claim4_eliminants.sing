@@ -1,0 +1,46 @@
+// ============================================================================
+// CLAIM 4 (Singular): elimination ideals over Q(a,b,c).
+// From I = <F1-a, F2-b, F3-c> in Q(a,b,c)[x,y,z]:
+//   * eliminate(y,z) gives the x-cubic
+//        D*x^3 + (4-3bc)*x - 2c ,   D = 27a^2c^2 - 18abc + 16a + b^3c - b^2.
+//   * eliminate(x,z) gives the y-cubic
+//        2y^3 - 3b y^2 + 18a y + (27a^2c - 18ab + b^3)   (leading coeff 2).
+// The mission allows "up to factors x^k, c"; Singular in fact returns these
+// EXACTLY, so we test exact equality (strictly stronger). We ALSO confirm the
+// eliminant divides / equals the claim via reduce(), belt and suspenders.
+// ============================================================================
+ring R = (0,a,b,c),(x,y,z),dp;
+poly F1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+3*x*y);
+poly F2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+3*x*y);
+poly F3 = 2*x - 3*x^2*y - x^3*z;
+ideal I = F1-a, F2-b, F3-c;
+
+poly Dp     = 27*a^2*c^2 - 18*a*b*c + 16*a + b^3*c - b^2;
+poly Xcubic = Dp*x^3 + (4-3*b*c)*x - 2*c;
+poly Ycubic = 2*y^3 - 3*b*y^2 + 18*a*y + (27*a^2*c - 18*a*b + b^3);
+
+// ---- eliminate y,z -> polynomial in x ----
+ideal Ex = eliminate(I, y*z);
+"CLAIM4 eliminate(y,z) generator:";
+Ex[1];
+int okx = ( size(Ex) == 1 && Ex[1] - Xcubic == 0 );
+// robustness: also confirm divisibility both directions (=> associates)
+int divx = ( reduce(Ex[1], std(ideal(Xcubic))) == 0 && reduce(Xcubic, std(ideal(Ex[1]))) == 0 );
+
+// ---- eliminate x,z -> polynomial in y ----
+ideal Ey = eliminate(I, x*z);
+"CLAIM4 eliminate(x,z) generator:";
+Ey[1];
+int oky = ( size(Ey) == 1 && Ey[1] - Ycubic == 0 );
+int divy = ( reduce(Ey[1], std(ideal(Ycubic))) == 0 && reduce(Ycubic, std(ideal(Ey[1]))) == 0 );
+
+if (okx && divx)
+{ "CLAIM4x x_eliminant_is_cubic: PASS (exact match)"; }
+else
+{ "CLAIM4x x_eliminant_is_cubic: FAIL"; }
+
+if (oky && divy)
+{ "CLAIM4y y_eliminant_is_cubic: PASS (exact match, leading coeff 2)"; }
+else
+{ "CLAIM4y y_eliminant_is_cubic: FAIL"; }
+$

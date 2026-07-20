@@ -1,0 +1,26 @@
+// ============================================================================
+// CLAIM 1 (Singular): det Jacobian(F) == -2 exactly, over Q[x,y,z].
+// F is Alpoge's Jacobian-Conjecture counterexample:
+//   F1 = (1+xy)^3 z + y^2 (1+xy)(4+3xy)
+//   F2 = y + 3x(1+xy)^2 z + 3 x y^2 (4+3xy)
+//   F3 = 2x - 3 x^2 y - x^3 z
+// A constant nonzero Jacobian => F is a Keller map. This is INDEPENDENT of the
+// sympy verification: no sympy anywhere, pure Singular symbolic determinant.
+// ============================================================================
+ring r = 0,(x,y,z),dp;
+poly F1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+3*x*y);
+poly F2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+3*x*y);
+poly F3 = 2*x - 3*x^2*y - x^3*z;
+
+matrix J[3][3];
+J[1,1]=diff(F1,x); J[1,2]=diff(F1,y); J[1,3]=diff(F1,z);
+J[2,1]=diff(F2,x); J[2,2]=diff(F2,y); J[2,3]=diff(F2,z);
+J[3,1]=diff(F3,x); J[3,2]=diff(F3,y); J[3,3]=diff(F3,z);
+
+poly d = det(J);
+"CLAIM1 det(Jacobian) computed =", d;
+if (d == -2)
+{ "CLAIM1 det_is_-2: PASS"; }
+else
+{ "CLAIM1 det_is_-2: FAIL (got " + string(d) + ")"; }
+$

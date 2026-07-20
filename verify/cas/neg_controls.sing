@@ -1,0 +1,118 @@
+// ============================================================================
+// NEGATIVE CONTROLS (Singular). A verification suite that cannot fail is
+// worthless. Each control feeds a DELIBERATELY BROKEN input to the SAME
+// machinery used for the real claim and asserts the property FAILS.
+// "PASS" here means: the break was correctly detected (property did NOT hold).
+// ============================================================================
+
+// ---------- NC1 : det class ----------
+// Replace (4+3xy) by (4+2xy). The Jacobian determinant must NOT be constant.
+ring r1 = 0,(x,y,z),dp;
+poly G1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+2*x*y);
+poly G2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+2*x*y);
+poly G3 = 2*x - 3*x^2*y - x^3*z;
+matrix Jb[3][3];
+Jb[1,1]=diff(G1,x); Jb[1,2]=diff(G1,y); Jb[1,3]=diff(G1,z);
+Jb[2,1]=diff(G2,x); Jb[2,2]=diff(G2,y); Jb[2,3]=diff(G2,z);
+Jb[3,1]=diff(G3,x); Jb[3,2]=diff(G3,y); Jb[3,3]=diff(G3,z);
+poly db = det(Jb);
+int nonconst = (diff(db,x)!=0 || diff(db,y)!=0 || diff(db,z)!=0);
+"NC1 perturbed det =", db;
+if (nonconst)
+{ "NC1 det_nonconstant_when_broken: PASS (break detected)"; }
+else
+{ "NC1 det_nonconstant_when_broken: FAIL (suite blind: broken map still constant det)"; }
+
+// ---------- NC2 : fiber-evaluation class ----------
+// Corrupt witness p2 z-coord 13/2 -> 13/3. F must NOT hit (-1/4,0,0).
+poly F1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+3*x*y);
+poly F2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+3*x*y);
+poly F3 = 2*x - 3*x^2*y - x^3*z;
+poly a2 = subst(F1, x,1, y,-3/2, z,13/3);
+poly b2 = subst(F2, x,1, y,-3/2, z,13/3);
+poly c2 = subst(F3, x,1, y,-3/2, z,13/3);
+"NC2 F(1,-3/2,13/3) =", a2, b2, c2, "  (target is -1/4, 0, 0)";
+if (a2 != -1/4 || b2 != 0 || c2 != 0)
+{ "NC2 broken_witness_misses_target: PASS (break detected)"; }
+else
+{ "NC2 broken_witness_misses_target: FAIL"; }
+
+// ---------- NC3 : zero-dimensionality / vdim class ----------
+// Drop F1: <F2,F3> must NOT be zero-dimensional (a positive-dim'l variety).
+ideal Idrop = F2, F3;
+ideal Gdrop = std(Idrop);
+int dmd = dim(Gdrop);
+"NC3 dim <F2,F3> =", dmd, " (want > 0, i.e. NOT a finite fiber)";
+if (dmd > 0)
+{ "NC3 underdetermined_not_zerodim: PASS (break detected)"; }
+else
+{ "NC3 underdetermined_not_zerodim: FAIL"; }
+
+// ---------- NC6 : empty-fiber / unit-ideal class ----------
+// A GENERIC target must NOT give the unit ideal (fiber is nonempty, vdim 3).
+ideal Igen = F1 - 3/7, F2 - (-2/5), F3 - 1/3;
+ideal Ggen = std(Igen);
+int isunitgen = (reduce(1, Ggen) == 0);
+"NC6 generic-target unit-ideal? (want 0/false):", isunitgen, "  vdim =", vdim(Ggen);
+if (isunitgen == 0)
+{ "NC6 generic_fiber_not_unit_ideal: PASS (break detected)"; }
+else
+{ "NC6 generic_fiber_not_unit_ideal: FAIL"; }
+
+// ---------- NC4 : eliminant class ----------
+// Perturbed map (4+2xy) must NOT reproduce the claimed x-cubic eliminant.
+ring R = (0,a,b,c),(x,y,z),dp;
+poly H1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+2*x*y);
+poly H2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+2*x*y);
+poly H3 = 2*x - 3*x^2*y - x^3*z;
+ideal Ib = H1-a, H2-b, H3-c;
+ideal Exb = eliminate(Ib, y*z);
+poly Dp     = 27*a^2*c^2 - 18*a*b*c + 16*a + b^3*c - b^2;
+poly Xcubic = Dp*x^3 + (4-3*b*c)*x - 2*c;
+"NC4 perturbed eliminate(y,z) generator:";
+Exb[1];
+if (Exb[1] - Xcubic != 0)
+{ "NC4 broken_eliminant_differs: PASS (break detected)"; }
+else
+{ "NC4 broken_eliminant_differs: FAIL"; }
+
+// ---------- NC5 : discriminant square-factor class ----------
+// Perturb leading coeff D -> D+1. The discriminant must LOSE the square pattern.
+ring Rd = (0,a,b,c),(x),dp;
+poly Dp2 = 27*a^2*c^2 - 18*a*b*c + 16*a + b^3*c - b^2;
+poly Cbad = (Dp2+1)*x^3 + (4-3*b*c)*x - 2*c;
+poly Resbad = resultant(Cbad, diff(Cbad,x), x);
+poly Sq = (27*a*c^2 - 9*b*c + 8)^2;
+poly deltabad = Resbad - 4*(Dp2+1)^2*Sq;   // 0 would mean pattern survived
+"NC5 Res_bad - 4*(D+1)^2*(27ac^2-9bc+8)^2 =", deltabad, " (want nonzero)";
+if (deltabad != 0)
+{ "NC5 broken_discriminant_no_square: PASS (break detected)"; }
+else
+{ "NC5 broken_discriminant_no_square: FAIL"; }
+
+// ---------- NC7 : equivariance class ----------
+// Wrong z-weight: z -> z*t (weight +1) instead of z/t^2. Identity must fail.
+ring re = (0,t),(x,y,z),dp;
+poly E1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+3*x*y);
+poly E1bad = subst(E1, x, t*x, y, y/t, z, z*t);   // wrong weight on z
+poly dbad = t^2*E1bad - E1;
+"NC7 t^2*F1(tx,y/t, z*t) - F1 =", dbad, " (want nonzero)";
+if (dbad != 0)
+{ "NC7 wrong_weight_breaks_equivariance: PASS (break detected)"; }
+else
+{ "NC7 wrong_weight_breaks_equivariance: FAIL"; }
+
+// ---------- NC8 : punt-identity class ----------
+// Change coefficient 2*F1 -> 3*F1 in the covering identity. Numerator != 0.
+ring rp = 0,(x,y,z),dp;
+poly P1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+3*x*y);
+poly P2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+3*x*y);
+poly P3 = 2*x - 3*x^2*y - x^3*z;
+poly u  = 1 + x*y;
+poly Nbad = 3*P1*x^3 - P2*x^2*u + 2*x*u^2 - P3*u^3;   // 3 instead of 2
+"NC8 broken punt numerator =", Nbad, " (want nonzero)";
+if (Nbad != 0)
+{ "NC8 broken_punt_identity_nonzero: PASS (break detected)"; }
+else
+{ "NC8 broken_punt_identity_nonzero: FAIL"; }
+$

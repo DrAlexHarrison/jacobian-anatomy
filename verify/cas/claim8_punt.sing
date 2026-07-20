@@ -1,0 +1,22 @@
+// ============================================================================
+// CLAIM 8 (Singular): the Punt covering identity.
+// With  r = x / (1+xy),  the identity
+//         2*F1*r^3 - F2*r^2 + 2*r - F3 = 0
+// holds in Q(x,y,z). Clearing the common denominator (1+xy)^3 =: u^3 gives the
+// polynomial numerator
+//         N = 2*F1*x^3 - F2*x^2*u + 2*x*u^2 - F3*u^3
+// which must be identically zero in Q[x,y,z].
+// ============================================================================
+ring r = 0,(x,y,z),dp;
+poly F1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+3*x*y);
+poly F2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+3*x*y);
+poly F3 = 2*x - 3*x^2*y - x^3*z;
+poly u  = 1 + x*y;
+
+poly N = 2*F1*x^3 - F2*x^2*u + 2*x*u^2 - F3*u^3;
+"CLAIM8 numerator of 2*F1*r^3 - F2*r^2 + 2*r - F3 (times (1+xy)^3) =", N;
+if (N == 0)
+{ "CLAIM8 punt_covering_identity: PASS"; }
+else
+{ "CLAIM8 punt_covering_identity: FAIL"; }
+$

@@ -1,0 +1,30 @@
+// ============================================================================
+// CLAIM 7 (Singular): the G_m equivariance / weighted homogeneity.
+// Under (x,y,z) -> (t x, y/t, z/t^2):
+//     F1(tx, y/t, z/t^2) = F1(x,y,z) / t^2
+//     F2(tx, y/t, z/t^2) = F2(x,y,z) / t
+//     F3(tx, y/t, z/t^2) = t * F3(x,y,z)
+// i.e. F is equivariant with weights (-2,-1,+1) on (F1,F2,F3). Verified as an
+// identity in Q(t)[x,y,z] by clearing t-denominators and comparing to zero.
+// ============================================================================
+ring r = (0,t),(x,y,z),dp;
+poly F1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+3*x*y);
+poly F2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+3*x*y);
+poly F3 = 2*x - 3*x^2*y - x^3*z;
+
+poly F1s = subst(F1, x, t*x, y, y/t, z, z/t^2);
+poly F2s = subst(F2, x, t*x, y, y/t, z, z/t^2);
+poly F3s = subst(F3, x, t*x, y, y/t, z, z/t^2);
+
+// Multiply through by t^2 / t / 1 to clear denominators, compare.
+poly d1 = t^2*F1s - F1;
+poly d2 = t*F2s   - F2;
+poly d3 = F3s     - t*F3;
+"CLAIM7 t^2*F1(tx,y/t,z/t^2) - F1 =", d1;
+"CLAIM7 t*F2(tx,y/t,z/t^2)   - F2 =", d2;
+"CLAIM7 F3(tx,y/t,z/t^2)   - t*F3 =", d3;
+if (d1 == 0 && d2 == 0 && d3 == 0)
+{ "CLAIM7 equivariance_weights_-2_-1_+1: PASS"; }
+else
+{ "CLAIM7 equivariance_weights_-2_-1_+1: FAIL"; }
+$

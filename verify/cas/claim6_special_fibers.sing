@@ -1,0 +1,42 @@
+// ============================================================================
+// CLAIM 6 (Singular): fibers over the discriminant/branch locus Gamma.
+//  (a) EMPTY fibers: at targets (4/27,4/3,1), (1/27,2/3,2), (4/243,-4/9,-3)
+//      the ideal <F1-a, F2-b, F3-c> is the UNIT ideal (1 in I) => no solutions.
+//  (b) SINGLE point: at target (-16/27, 0, 1) the ideal is zero-dimensional
+//      with vdim = 1 (exactly one fiber point, multiplicity 1).
+// Test for unit ideal: reduce(1, std(I)) == 0  <=>  1 in I  <=>  fiber empty.
+// ============================================================================
+ring r = 0,(x,y,z),dp;
+poly F1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+3*x*y);
+poly F2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+3*x*y);
+poly F3 = 2*x - 3*x^2*y - x^3*z;
+
+proc isunit(number A, number B, number C)
+{
+  ideal I = F1 - A, F2 - B, F3 - C;
+  ideal G = std(I);
+  return( reduce(1, G) == 0 );   // 1 => unit ideal (empty fiber)
+}
+
+int allempty = 1;
+int e1 = isunit(4/27,  4/3,  1);
+int e2 = isunit(1/27,  2/3,  2);
+int e3 = isunit(4/243, -4/9, -3);
+"CLAIM6a empty-fiber unit-ideal flags (want 1 1 1):", e1, e2, e3;
+if (!(e1 && e2 && e3)) { allempty = 0; }
+if (allempty == 1)
+{ "CLAIM6a empty_fibers_unit_ideal: PASS"; }
+else
+{ "CLAIM6a empty_fibers_unit_ideal: FAIL"; }
+
+// ---- single-point fiber ----
+ideal Is = F1 - (-16/27), F2 - 0, F3 - 1;
+ideal Gs = std(Is);
+int dms = dim(Gs);
+int vds = vdim(Gs);
+"CLAIM6b single-point fiber (-16/27,0,1): dim =", dms, " vdim =", vds;
+if (dms == 0 && vds == 1)
+{ "CLAIM6b single_point_vdim_1: PASS"; }
+else
+{ "CLAIM6b single_point_vdim_1: FAIL (dim="+string(dms)+" vdim="+string(vds)+")"; }
+$

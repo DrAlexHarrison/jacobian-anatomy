@@ -1,0 +1,7 @@
+mathlib4/
+setup.log
+*.olean
+audit/jacobian/
+audit/build.log
+refs/
+coordination/

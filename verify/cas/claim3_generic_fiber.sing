@@ -1,0 +1,38 @@
+// ============================================================================
+// CLAIM 3 (Singular): the GENERIC fiber has exactly 3 points.
+// At the three "random" rational targets below, the specialized ideal
+//   <F1-a, F2-b, F3-c>  is zero-dimensional with vdim = 3.
+// Targets: (3/7,-2/5,1/3), (11/4,5/9,-7/2), (-8/3,13/11,1/6).
+// ============================================================================
+ring r = 0,(x,y,z),dp;
+poly F1 = (1+x*y)^3*z + y^2*(1+x*y)*(4+3*x*y);
+poly F2 = y + 3*x*(1+x*y)^2*z + 3*x*y^2*(4+3*x*y);
+poly F3 = 2*x - 3*x^2*y - x^3*z;
+
+proc fiberdim(number A, number B, number C)
+{
+  ideal I = F1 - A, F2 - B, F3 - C;
+  ideal G = std(I);
+  list L = dim(G), vdim(G);
+  return(L);
+}
+
+int allok = 1;
+
+list L1 = fiberdim(3/7, -2/5, 1/3);
+"CLAIM3 target (3/7,-2/5,1/3):   dim =", L1[1], " vdim =", L1[2];
+if (!(L1[1]==0 && L1[2]==3)) { allok = 0; }
+
+list L2 = fiberdim(11/4, 5/9, -7/2);
+"CLAIM3 target (11/4,5/9,-7/2):  dim =", L2[1], " vdim =", L2[2];
+if (!(L2[1]==0 && L2[2]==3)) { allok = 0; }
+
+list L3 = fiberdim(-8/3, 13/11, 1/6);
+"CLAIM3 target (-8/3,13/11,1/6): dim =", L3[1], " vdim =", L3[2];
+if (!(L3[1]==0 && L3[2]==3)) { allok = 0; }
+
+if (allok == 1)
+{ "CLAIM3 generic_fiber_count_3: PASS"; }
+else
+{ "CLAIM3 generic_fiber_count_3: FAIL"; }
+$

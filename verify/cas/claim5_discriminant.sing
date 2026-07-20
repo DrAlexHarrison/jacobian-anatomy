@@ -1,0 +1,25 @@
+// ============================================================================
+// CLAIM 5 (Singular cross-check; primary tool is PARI): discriminant of the
+// x-cubic C(x) = D*x^3 + (4-3bc)*x - 2c factors as
+//        disc(C) = -4 * (27ac^2 - 9bc + 8)^2 * D    (rational constant -4).
+// Singular has no univariate discriminant over Q(a,b,c) directly, so we use
+// the resultant identity  Res(C, C') = (-1)^{n(n-1)/2} * a_n * disc(C).
+// For a cubic (n=3): Res(C,C') = -D * disc(C), hence disc(C) = -Res/D.
+// We verify the EXACT polynomial identity  Res(C,C') == 4 * D^2 * (27ac^2-9bc+8)^2,
+// which is equivalent to  disc(C) = -4 * D * (27ac^2-9bc+8)^2.
+// ============================================================================
+ring R = (0,a,b,c),(x),dp;
+poly Dp  = 27*a^2*c^2 - 18*a*b*c + 16*a + b^3*c - b^2;
+poly C   = Dp*x^3 + (4-3*b*c)*x - 2*c;
+poly Cp  = diff(C, x);
+poly Res = resultant(C, Cp, x);
+poly Sq  = (27*a*c^2 - 9*b*c + 8)^2;
+
+// Res(C,C') should equal  4 * D^2 * Sq   (=> disc = -Res/D = -4*D*Sq).
+poly delta = Res - 4*Dp^2*Sq;
+"CLAIM5 Res(C,C') - 4*D^2*(27ac^2-9bc+8)^2 =", delta;
+if (delta == 0)
+{ "CLAIM5 discriminant_square_factor: PASS (disc = -4*(27ac^2-9bc+8)^2*D)"; }
+else
+{ "CLAIM5 discriminant_square_factor: FAIL"; }
+$
