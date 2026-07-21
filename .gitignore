@@ -5,3 +5,4 @@ audit/jacobian/
 audit/build.log
 refs/
 coordination/
+__pycache__/

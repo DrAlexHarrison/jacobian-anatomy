@@ -1,8 +1,16 @@
 # The anatomy of the Alpöge–Mathew–Fable counterexample to the Jacobian Conjecture
 
-**Version 1.0, 2026-07-20.** Externally refereed (verdict: ship-with-edits,
+**Version 1.1, 2026-07-20.** Externally refereed (v1.0 verdict: ship-with-edits,
 all required edits applied; referee artifacts in `audit/`). Errata will be
 posted prominently here.
+**v1.1 additions (each independently adversarially refereed before inclusion):**
+the SU(79) Mathieu certificate is now a machine-certified, refereed theorem
+with a runnable public certificate (`mathieu-su79/`, report
+`audit/referee2-su79.md`); the per-N scope reading in §7 is confirmed from
+Mathieu's original 1997 paper by two independent full-text reads; the
+"every generic degree n ≥ 3 occurs in dimension 3" family of
+jacobianfun.org (Gallagher + GPT-5.6-Sol) is verified, with attribution
+(§9.2, `audit/referee2_jacobianfun_n7.py`).
 
 ## Provenance and epistemic status
 
@@ -352,12 +360,34 @@ of its class.
   What does follow: the map lifts (Bass–Connell–Wright) to a
   homogeneous-form counterexample in explicit dimension **M = 79**
   (`druzkowski/`, independently verified four times), so **the Mathieu
-  conjecture is false for SU(N) for all N ≥ 79**. The minimal such N is a
+  conjecture is false for SU(N) for all N ≥ 79** (for N > 79, pad the C⁷⁹
+  lift by identity coordinates: the padded map is still cubic-homogeneous,
+  Keller, and non-injective, and the chain reruns verbatim; see
+  `audit/referee2-su79.md` §1 step 5). The minimal such N is a
   new open question: N_min ∈ [4, 79] in general (dimension 3 is excluded
   for homogeneous maps of *all* degrees by de Bondt–van den Essen 2005),
   and ∈ [5, 79] for the cubic route used here (Hubbers 1994 settles the
   dim-4 cubic case); 79 is an upper bound of the plain reduction, not an
-  optimum. SU(2) remains unresolved (tied to JC₂).
+  optimum. SU(2) remains unresolved (via this chain it governs only
+  homogeneous-form JC₂, which is classically true; proving Mathieu for
+  SU(2) is an active program [CITED: Müger–Tuset, arXiv 2210.06582]).
+  **v1.1 [PROVED, adversarially refereed]:** the SU(79) statement is now a
+  machine-certified theorem. `mathieu-su79/` carries the runnable
+  certificate: L = id + H on C⁷⁹ cubic-homogeneous Keller with an explicit
+  3-point collision, whose formal inverse is provably non-polynomial with
+  explicit nonzero homogeneous components at degrees 3–11; the referee
+  report and an independent from-scratch verifier (term-by-term agreement,
+  disjoint algorithms) are `audit/referee2-su79.md` and
+  `audit/referee2_su79_verify.py`. The bridge is cited Mathieu-primary
+  (Prop 2.2(ii) + Cor 1.3/1.7): our referee found a genuine proof gap at
+  the fixed-ξ step of Zwart's Thm 4.23 (the theorem survives via Mathieu's
+  Baire-generic ξ; details in the report). Consequence: a violating
+  finite-type pair (f, g) on SU(79) **exists**; writing one explicitly
+  requires Mathieu's Cartan twist by a generic ξ (open work). The per-N
+  scope reading above is additionally confirmed from Mathieu's original
+  paper by two independent full-text reads: Prop 5.3's proof is
+  homogeneous-form-only, and the only homogeneous-to-general bridge is
+  Bass–Connell–Wright, which inflates dimension.
 - **Zhao's vanishing conjecture**: false *as a family* (the equivalence with
   JC is family-to-family, and the JC ⇒ VC direction consumes JC in dimension
   n+1 [CITED: Zhao, Trans. AMS 359 (2007), Thm 7.2 and Prop. 7.4]); Zhao's
@@ -458,7 +488,14 @@ the program §9 proposes.)
    and a Galois Keller map is an automorphism — (g)⇒(a) of [CITED: BCW,
    Bull. AMS 7 (1982), Thm 2.1; due to Campbell, Math. Ann. 205 (1973)
    243–248; algebraic proofs Razar, Wright, Oda]. So this map achieves the
-   minimal possible generic degree. (Generic degrees 3 and 8 (§8) both
+   minimal possible generic degree. **v1.1 [VERIFIED, with attribution]:**
+   in dimension 3, *every* generic degree n ≥ 3 occurs: the seed-lift
+   family of jacobianfun.org (A. Gallagher + GPT-5.6-Sol) achieves each n,
+   and our referee re-derived their uniform argument in full and built the
+   n = 7 instance symbolically as a fresh check
+   (`audit/referee2_jacobianfun_n7.py`: polynomial lift, det ≡ 1, seven
+   simple roots; the construction is theirs, the verification ours).
+   (Generic degrees 3 and 8 (§8) both
    occur. Contrast with the plane, where published results force both
    degrees of any counterexample to be composite (Magnus; Nakai–Baba), and a
    recent unrefereed preprint claims every *prime* extension degree

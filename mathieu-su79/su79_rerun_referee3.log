@@ -1,0 +1,42 @@
+# Clean-room rerun of su79_certificate.py (post-R1-R8 script + assembly fixes: portable G_map
+# path, default D=11) by REFEREE-3, 2026-07-20 ~20:57 MDT, fresh checkpoint, run in a
+# public-tree layout (mathieu-su79/ beside druzkowski/). Supersedes su79_rerun_referee2.log,
+# which predated the R2/R6 revisions (its control label and final banner no longer matched the
+# script); every data line of the two runs is identical modulo timings, including all witness
+# terms and the 77,934-term checkpoint count. su79_run.log remains superseded per
+# audit/referee2-su79.md Finding A.
+[    0.6s] CHECK 1: parsed L = id + H on C^79; 51/79 components have nonzero H; every H-term verified homogeneous of degree 3.  PASS
+[    0.6s] CHECK 3: L(P)=L(Q)=L(R): True; P,Q,R distinct: True
+[    0.6s]          common image L(P) = (v1,v2,v3,t) = (0,0,-1/4,...,1); rest zero: True
+[    0.6s] CHECK 3: non-injectivity CERTIFIED (exact rational arithmetic).  PASS
+[    3.3s] CHECK 2: det J L == 1 at 4 random rational points: True; at collision P: True.  PASS (full symbolic proof: druzkowski/)
+[    3.3s] Computing formal inverse of L to total degree 11 (sparse, checkpointed)...
+[    3.3s]   [L] F^(3) NONZERO: component v1 has term (1)·v16^1*v17^1*t^1 ...  (total stored terms: 203)
+[    3.4s]   [L] F^(5) NONZERO: component v1 has term (-1)·v16^1*w17^1*t^3 ...  (total stored terms: 877)
+[    3.9s]   [L] F^(7) NONZERO: component v1 has term (-4)·v1^3*v3^1*t^3 ...  (total stored terms: 4780)
+[    9.3s]   [L] F^(9) NONZERO: component v1 has term (5/2)·v1^3*v2^2*t^4 ...  (total stored terms: 21135)
+[   61.4s]   [L] F^(11) NONZERO: component v1 has term (-15)·v1^4*v2^1*v3^1*t^5 ...  (total stored terms: 77934)
+[   62.4s] ILLUSTRATION: nonzero inverse components of L at degrees [3, 5, 7, 9, 11] (all odd; each an explicit Ψ(Q_elt^k)!=0 witness). Non-termination past any finite D is guaranteed by CHECK 3, not by this finite scan.
+[   62.4s] NEGATIVE CONTROL: cubic-homogeneous triangular automorphism on C^3 ...
+[   62.4s]   [AUTO] F^(3) NONZERO: component x0 has term (-1)·x1^3 ...  (total stored terms: 5)
+[   62.4s]   [AUTO] F^(5) NONZERO: component x0 has term (3)·x1^2*x2^3 ...  (total stored terms: 6)
+[   62.4s]   [AUTO] F^(7) NONZERO: component x0 has term (-3)·x1^1*x2^6 ...  (total stored terms: 7)
+[   62.4s]   [AUTO] F^(9) NONZERO: component x0 has term (1)·x2^9 ...  (total stored terms: 8)
+[   62.4s]   [AUTO] F^(11) == 0  (total stored terms: 8)
+[   62.4s]   [AUTO] F^(13) == 0  (total stored terms: 8)
+[   62.4s]   [AUTO] F^(15) == 0  (total stored terms: 8)
+[   62.4s] NEGATIVE CONTROL: inverse nonzero only at degrees [3, 5, 7, 9]; F^(d)==0 for all odd d>9 up to 15 — inverse TERMINATES => automorphism. Machinery distinguishes automorphism (terminates) from L (does not).
+
+========================================================================
+CERTIFICATE: the Mathieu conjecture is FALSE on SU(79).
+  CHECK 1  L = id + H on C^79 is cubic-homogeneous.               PASS
+  CHECK 2  det J L = 1 (Keller) — exact spot-checks + druzkowski. PASS
+  CHECK 3  L not injective: 3 distinct exact preimages collide.   PASS
+  => formal inverse of L is non-terminating (no polynomial inverse)
+  => Ψ(Q_elt^k) != 0 for infinitely many k, while (Q_elt^k)_{2kω1}=0 ∀k
+  => MC(SU(79)) FALSE: a finite-type pair (f,g) with ∫f^n=0 ∀n, ∫f^n g≠0
+     ∞-often EXISTS (explicit pair = future work via the Cartan twist).
+  Illustration: inverse nonzero at degrees [3, 5, 7, 9, 11] (Ψ witnesses).
+  Negative control terminates at degree 9: machinery is falsifiable.
+========================================================================
+exit=0
