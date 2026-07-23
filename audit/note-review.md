@@ -1,6 +1,6 @@
 # Review notes: NOTE.md v0.9
 
-**Summary: no claim found false; the edits below were applied.** No claim in the note is false. Every mathematical
+**Summary.** No claim in the note is false; the edits below were applied. Every mathematical
 statement I checked is true, every suite reruns green, and every citation I
 could verify says what the note says it says. The edits below are: three
 places where a [PROVED]/[COMPUTED] label points at a certificate chain that
@@ -149,7 +149,7 @@ open immersion onto C³ ⇒ automorphism ✓.
 - **E3 (recommended).** §7 real form: "**strictly stronger** than Pinchuk's
   counterexample" compares across dimensions — Pinchuk's lives in the harder
   n = 2 and is not dominated by an n = 3 example. The parenthetical already
-  states the differences honestly; change "strictly stronger than" to e.g.
+  states the differences accurately; change "strictly stronger than" to e.g.
   "with a strictly stronger Jacobian condition than" or "a constant-Jacobian
   counterpart, in n = 3, to". The degree-6 and constant-vs-nonconstant facts
   themselves are verified.
@@ -179,7 +179,7 @@ degree 1"). The four-line repaired-conjecture theorem is sound as written.
 - **Lean paragraph (§1):** Dean-repo claims match the audit file and build
   log; JC.lean's own claims now verified by my compile+axioms run (item 3
   above). "First public ... as far as we can tell" is properly hedged. The
-  char-2 trick arithmetic verified (N7). The honest caveat (char p > 0
+  char-2 trick arithmetic verified (N7). The caveat (char p > 0
   classically false) is present and correct.
 
 ## Required edits

@@ -49,7 +49,7 @@ AXIS 1, WANG 2, LINEAR 1 — INJECTIVE by the structural lemmas; no duplicates.
 
 3. **UNCOVERED: none.**
 
-## Honesty items (enumerated per the 04:38 order; every one carries into any write-up)
+## Caveats
 
 H1. **Deg-7 control, zero-witness route:** the 22-free gate rung passed by
     the EXPLICIT-ZERO route (Z5E: facstd decomposition + point-in-LIVE-

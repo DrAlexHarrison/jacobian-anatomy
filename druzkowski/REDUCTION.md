@@ -198,7 +198,7 @@ Prop. 2.1, specialized — our A needs **no matrix inversion**):
 D₀, B₀ and the three colliding points in `F_druzkowski.txt`), Keller,
 J_{H_F} nilpotent, with three explicit distinct colliding points.
 
-## 4. What is proof vs. evidence (honesty ledger)
+## 4. What is proof and what is evidence
 
 * Symbolic, machine-executed, exact: base det = −2; det J F̃ = 1; the
   18 unit-row assertions per elimination replay (×3 replays: plain, TX,

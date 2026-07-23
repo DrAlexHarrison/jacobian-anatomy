@@ -181,7 +181,7 @@ achievable but is NEW WORK, not done). R2 de-escalates the claim; the
   the Main Conjecture only for the maximal compact of the fixed G"); Zwart
   becomes expository-secondary with the Thm 4.23 caveat.
 - **R2.** Replace every "explicit finite-type (f,g)" by existence phrasing;
-  optionally add the honest constructive path (Cartan twist, generic ξ) as
+  optionally add the constructive path (Cartan twist, generic ξ) as
   future work.
 - **R3.** Commit the fresh rerun log (done: ../mathieu-su79/su79_rerun.log); retire
   su79_run.log or annotate it as superseded (Finding A).

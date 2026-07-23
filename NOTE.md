@@ -12,7 +12,7 @@ against Mathieu's 1997 paper; the "every generic degree n ≥ 3 occurs in
 dimension 3" family of jacobianfun.org (Gallagher + GPT-5.6-Sol) verified,
 with attribution (§9.2, `audit/jacobianfun_n7_check.py`).
 
-## Provenance and epistemic status
+## Provenance
 
 The map is that of **Alpöge–Mathew–Fable** (announced 2026-07-19): found by
 Levent Alpöge (Harvard) working with Claude Fable, prompted by a question of
@@ -85,7 +85,7 @@ knowledge of theirs. We also ran a full build-and-axiom audit of their
 repository (`audit/deancureton-audit.md`): verdict **clean** — `lake build`
 succeeds on the pinned toolchain, no `sorry`/`native_decide`/custom axioms,
 every theorem depends on exactly the three standard axioms, and the encoding
-is faithful. (One honest caveat recorded there: for char p > 0 the conjecture
+is faithful. (One caveat recorded there: for char p > 0 the conjecture
 was already classically false, so the all-characteristics breadth is formally,
 not mathematically, novel.)
 
