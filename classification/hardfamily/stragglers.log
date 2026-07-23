@@ -1,0 +1,18 @@
+STRAGGLERS Mon Jul 20 11:33:04 PM MDT 2026: 720 721 722 723 728 729 734 735 736 737 738 739 740 
+720 rc=1 dt=255s nlive=? unit=0 nonunit=0 RESOURCE-UNDECIDED (memory famine ~23:33, not a genuine attempt)
+721 rc=1 dt=255s nlive=? unit=0 nonunit=0 RESOURCE-UNDECIDED (memory famine ~23:33, not a genuine attempt)
+STRAGGLERS Mon Jul 20 11:38:41 PM MDT 2026: 720 721 728 734 736 738 740 723 722 729 735 737 739 
+721 rc=124 dt=7204s nlive=? unit=0 nonunit=0 NO-VERDICT
+720 rc=124 dt=7205s nlive=? unit=0 nonunit=0 NO-VERDICT
+728 rc=124 dt=7201s nlive=? unit=0 nonunit=0 NO-VERDICT
+734 rc=124 dt=7209s nlive=? unit=0 nonunit=0 NO-VERDICT
+736 rc=0 dt=713s nlive=9 unit=27 nonunit=0 VERDICT-FACSTD system 736: EMPTY
+738 rc=124 dt=7200s nlive=? unit=0 nonunit=0 NO-VERDICT
+740 rc=124 dt=7205s nlive=? unit=0 nonunit=0 NO-VERDICT
+723 rc=124 dt=7206s nlive=? unit=0 nonunit=0 NO-VERDICT
+722 rc=124 dt=7204s nlive=? unit=0 nonunit=0 NO-VERDICT
+729 rc=124 dt=7202s nlive=? unit=0 nonunit=0 NO-VERDICT
+735 rc=124 dt=7200s nlive=? unit=0 nonunit=0 NO-VERDICT
+737 rc=0 dt=887s nlive=9 unit=27 nonunit=0 VERDICT-FACSTD system 737: EMPTY
+739 rc=124 dt=7201s nlive=? unit=0 nonunit=0 NO-VERDICT
+STRAGGLERS DONE Tue Jul 21 11:50:49 AM MDT 2026

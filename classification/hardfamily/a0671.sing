@@ -1,0 +1,35 @@
+// decomposed attack, system 671: w=[1, -2, 5] sizes=[4, 3, 4]
+LIB "primdec.lib";
+ring rq = 0, (q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10), dp;
+ideal KE = -10*q10*q2*q6 + 5*q10*q3*q5,-5*q10*q2*q5,-10*q0*q10*q6 - 5*q10*q2*q4 + 4*q3*q6*q9,-10*q0*q10*q5 - 4*q2*q6*q9 + 10*q3*q5*q9 + 8*q3*q6*q8,2*q2*q5*q9 + 14*q3*q5*q8,-5*q0*q10*q4 + 2*q1*q6*q9 + 3*q3*q4*q9 + 4*q3*q6*q7,6*q2*q5*q8,-6*q0*q6*q9 + 3*q1*q5*q9 + 4*q1*q6*q8 - 2*q2*q6*q7 + 6*q3*q4*q8 + 11*q3*q5*q7,-5*q0*q5*q9 - 4*q0*q6*q8 + 5*q1*q5*q8 + 3*q2*q4*q8 + 5*q2*q5*q7,q1*q4*q9 + 2*q1*q6*q7 + 3*q3*q4*q7,-3*q0*q5*q8,-2*q0*q4*q9 - 4*q0*q6*q7 + 2*q1*q4*q8 + 4*q1*q5*q7 + 2*q2*q4*q7,-q0*q4*q8 - 2*q0*q5*q7;
+poly det0 = q1*q4*q7;
+list MA = minAssGTZ(KE);
+"NCOMP", size(MA);
+int i; int kk; int bad = 0; int nlive = 0;
+intvec LIVEV; LIVEV[size(MA)] = 0;
+for (i = 1; i <= size(MA); i++) {
+  MA[i] = std(MA[i]);
+  if (reduce(det0, MA[i]) == 0) { LIVEV[i] = 0; "COMPONENT", i, "DEAD (det0 in P)"; }
+  else { LIVEV[i] = 1; nlive++; "COMPONENT", i, "LIVE:"; MA[i]; }
+}
+"NLIVE", nlive;
+ring rf = 0, (q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, x, y, z, X, Y, Z, t, s), dp;
+ideal KEf = imap(rq, KE); poly det0f = imap(rq, det0);
+ideal COLL = -X^3*Y*q3 - X^2*Y^3*Z*q2 - X*q1 - Y^2*Z*q0 + q0*y^2*z + q1*x + q2*x^2*y^3*z + q3*x^3*y,-X^2*Y^2*q6 - X*Y^4*Z*q5 - Y*q4 + q4*y + q5*x*y^4*z + q6*x^2*y^2,-X^5*q10 - X^2*Y*Z*q9 - X*Y^3*Z^2*q8 - Z*q7 + q10*x^5 + q7*z + q8*x*y^3*z^2 + q9*x^2*y*z;
+list MAf = imap(rq, MA);
+ideal diffs = x-X, y-Y, z-Z;
+int ncoll = 0;
+for (i = 1; i <= size(MAf); i++) {
+  if (LIVEV[i] == 1) {
+    for (kk = 1; kk <= 3; kk++) {
+      ideal I = KEf, MAf[i], COLL, t*diffs[kk]-1, s*det0f-1;
+      ideal G = groebner(I);
+      if (reduce(1, G) != 0) { bad = 1; "NONUNIT comp", i, "k", kk; }
+      else { "UNIT comp", i, "k", kk; }
+      kill I; kill G;
+    }
+  }
+}
+if (bad == 0) { "VERDICT-DECOMPOSED system 671: EMPTY"; }
+else { "VERDICT-DECOMPOSED system 671: NONUNIT COMPONENT FOUND -- INVESTIGATE"; }
+exit;

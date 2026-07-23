@@ -1,0 +1,15 @@
+TAILWALK START Mon Jul 20 08:50:49 PM MDT 2026 b-queue: 726 727 728 729 734 735 730 731 732 733 740 a-queue: 641 648
+726 rc=0 dt=27s nlive=23 unit=69 nonunit=0 VERDICT-FACSTD system 726: EMPTY
+727 rc=0 dt=116s nlive=99 unit=297 nonunit=0 VERDICT-FACSTD system 727: EMPTY
+728 rc=124 dt=1800s nlive=? unit=0 nonunit=0 NO-VERDICT
+729 rc=124 dt=1800s nlive=? unit=0 nonunit=0 NO-VERDICT
+734 rc=124 dt=1804s nlive=? unit=0 nonunit=0 NO-VERDICT
+735 rc=124 dt=1800s nlive=? unit=0 nonunit=0 NO-VERDICT
+730 rc=0 dt=91s nlive=11 unit=33 nonunit=0 VERDICT-FACSTD system 730: EMPTY
+731 rc=0 dt=34s nlive=19 unit=57 nonunit=0 VERDICT-FACSTD system 731: EMPTY
+732 rc=0 dt=30s nlive=9 unit=27 nonunit=0 VERDICT-FACSTD system 732: EMPTY
+733 rc=0 dt=51s nlive=15 unit=45 nonunit=0 VERDICT-FACSTD system 733: EMPTY
+740 rc=124 dt=1804s nlive=? unit=0 nonunit=0 NO-VERDICT
+641 rc=0 dt=1s nlive=1 unit=3 nonunit=0 VERDICT-DECOMPOSED system 641: EMPTY
+648 rc=0 dt=0s nlive=1 unit=3 nonunit=0 VERDICT-DECOMPOSED system 648: EMPTY
+TAILWALK DONE Mon Jul 20 10:23:27 PM MDT 2026

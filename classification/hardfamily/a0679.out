@@ -1,0 +1,20 @@
+NCOMP 7
+COMPONENT 1 DEAD (det0 in P)
+COMPONENT 2 DEAD (det0 in P)
+COMPONENT 3 DEAD (det0 in P)
+COMPONENT 4 DEAD (det0 in P)
+COMPONENT 5 DEAD (det0 in P)
+COMPONENT 6 LIVE:
+_[1]=q6
+_[2]=q5
+_[3]=q2
+_[4]=q1
+_[5]=q9^2-4*q8*q10
+_[6]=q4*q9-2*q3*q10
+_[7]=2*q4*q8-q3*q9
+COMPONENT 7 DEAD (det0 in P)
+NLIVE 1
+UNIT comp 6 k 1
+UNIT comp 6 k 2
+UNIT comp 6 k 3
+VERDICT-DECOMPOSED system 679: EMPTY

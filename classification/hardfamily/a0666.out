@@ -1,0 +1,30 @@
+NCOMP 7
+COMPONENT 1 DEAD (det0 in P)
+COMPONENT 2 LIVE:
+_[1]=q10
+_[2]=q9
+_[3]=q8
+_[4]=q6
+_[5]=q5
+_[6]=q3
+_[7]=q2
+COMPONENT 3 DEAD (det0 in P)
+COMPONENT 4 LIVE:
+_[1]=q10
+_[2]=q8
+_[3]=q6
+_[4]=q5
+_[5]=q3
+_[6]=q2
+_[7]=q0
+COMPONENT 5 DEAD (det0 in P)
+COMPONENT 6 DEAD (det0 in P)
+COMPONENT 7 DEAD (det0 in P)
+NLIVE 2
+UNIT comp 2 k 1
+UNIT comp 2 k 2
+UNIT comp 2 k 3
+UNIT comp 4 k 1
+UNIT comp 4 k 2
+UNIT comp 4 k 3
+VERDICT-DECOMPOSED system 666: EMPTY

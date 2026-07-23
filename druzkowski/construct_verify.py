@@ -38,6 +38,8 @@ The script rebuilds everything from scratch and asserts:
 Run:  /usr/bin/python3 construct_verify.py
 """
 
+import os
+HERE = os.path.dirname(os.path.abspath(__file__))
 import sys
 import time
 import random
@@ -442,7 +444,7 @@ log(f"  det J_G == 1 identically (proved symbolically);  J_H nilpotent;  H homog
 log(f"  gadget steps: {step}")
 log("")
 
-with open('/home/alex/code/jc/druzkowski/G_map.txt', 'w') as fh:
+with open(os.path.join(HERE, 'G_map.txt'), 'w') as fh:
     fh.write(f"# Cubic-homogeneous Keller counterexample G = id + H on C^{N_FINAL}\n")
     fh.write(f"# Variables: v1..v{n1} (v1,v2,v3 = x,y,z of Alpoge's F), "
              f"w1..w{n1} (doubling partners), t (homogenizing)\n")
@@ -454,7 +456,7 @@ with open('/home/alex/code/jc/druzkowski/G_map.txt', 'w') as fh:
         fh.write(f"\n{name} = {[str(c) for c in pt]}\n")
     fh.write(f"\ncommon image = {[str(c) for c in IMG_L]}\n")
 
-with open('/home/alex/code/jc/druzkowski/collisions.txt', 'w') as fh:
+with open(os.path.join(HERE, 'collisions.txt'), 'w') as fh:
     for name, pt in zip("PQR", PTS_L):
         fh.write(f"{name}:\n")
         for v, c in zip(VARS_L, pt):
@@ -684,7 +686,7 @@ except ImportError:
     log("  (numpy unavailable; skipped float spot-check -- Sylvester chain stands)")
 
 # --- outputs ------------------------------------------------------------
-with open('/home/alex/code/jc/druzkowski/F_druzkowski.txt', 'w') as fh:
+with open(os.path.join(HERE, 'F_druzkowski.txt'), 'w') as fh:
     fh.write(f"# Druzkowski cubic-linear counterexample F(X) = X - (A X)^{{*3}} "
              f"on C^{NB}\n")
     fh.write(f"# N = r0 + nA = {r0} + {nA} = {NB};  X = (p_1..p_{r0}, "

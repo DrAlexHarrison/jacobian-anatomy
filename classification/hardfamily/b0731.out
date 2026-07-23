@@ -1,0 +1,271 @@
+NBRANCH 211
+BRANCH 1 DEAD (det0 in ideal)
+BRANCH 2 DEAD (det0 in ideal)
+BRANCH 3 LIVE ngens 18
+BRANCH 4 LIVE ngens 21
+BRANCH 5 LIVE ngens 22
+BRANCH 6 DEAD (det0 in ideal)
+BRANCH 7 DEAD (det0 in ideal)
+BRANCH 8 LIVE ngens 28
+BRANCH 9 LIVE ngens 25
+BRANCH 10 DEAD (det0 in ideal)
+BRANCH 11 LIVE ngens 37
+BRANCH 12 DEAD (det0 in ideal)
+BRANCH 13 DEAD (det0 in ideal)
+BRANCH 14 LIVE ngens 29
+BRANCH 15 DEAD (det0 in ideal)
+BRANCH 16 DEAD (det0 in ideal)
+BRANCH 17 DEAD (det0 in ideal)
+BRANCH 18 DEAD (det0 in ideal)
+BRANCH 19 DEAD (det0 in ideal)
+BRANCH 20 LIVE ngens 60
+BRANCH 21 DEAD (det0 in ideal)
+BRANCH 22 LIVE ngens 51
+BRANCH 23 DEAD (det0 in ideal)
+BRANCH 24 LIVE ngens 51
+BRANCH 25 LIVE ngens 34
+BRANCH 26 DEAD (det0 in ideal)
+BRANCH 27 DEAD (det0 in ideal)
+BRANCH 28 DEAD (det0 in ideal)
+BRANCH 29 DEAD (det0 in ideal)
+BRANCH 30 DEAD (det0 in ideal)
+BRANCH 31 DEAD (det0 in ideal)
+BRANCH 32 DEAD (det0 in ideal)
+BRANCH 33 DEAD (det0 in ideal)
+BRANCH 34 DEAD (det0 in ideal)
+BRANCH 35 DEAD (det0 in ideal)
+BRANCH 36 LIVE ngens 25
+BRANCH 37 LIVE ngens 32
+BRANCH 38 DEAD (det0 in ideal)
+BRANCH 39 DEAD (det0 in ideal)
+BRANCH 40 DEAD (det0 in ideal)
+BRANCH 41 DEAD (det0 in ideal)
+BRANCH 42 DEAD (det0 in ideal)
+BRANCH 43 DEAD (det0 in ideal)
+BRANCH 44 DEAD (det0 in ideal)
+BRANCH 45 DEAD (det0 in ideal)
+BRANCH 46 DEAD (det0 in ideal)
+BRANCH 47 DEAD (det0 in ideal)
+BRANCH 48 DEAD (det0 in ideal)
+BRANCH 49 DEAD (det0 in ideal)
+BRANCH 50 DEAD (det0 in ideal)
+BRANCH 51 DEAD (det0 in ideal)
+BRANCH 52 DEAD (det0 in ideal)
+BRANCH 53 DEAD (det0 in ideal)
+BRANCH 54 DEAD (det0 in ideal)
+BRANCH 55 DEAD (det0 in ideal)
+BRANCH 56 LIVE ngens 18
+BRANCH 57 DEAD (det0 in ideal)
+BRANCH 58 LIVE ngens 21
+BRANCH 59 DEAD (det0 in ideal)
+BRANCH 60 DEAD (det0 in ideal)
+BRANCH 61 DEAD (det0 in ideal)
+BRANCH 62 DEAD (det0 in ideal)
+BRANCH 63 DEAD (det0 in ideal)
+BRANCH 64 DEAD (det0 in ideal)
+BRANCH 65 DEAD (det0 in ideal)
+BRANCH 66 DEAD (det0 in ideal)
+BRANCH 67 DEAD (det0 in ideal)
+BRANCH 68 DEAD (det0 in ideal)
+BRANCH 69 DEAD (det0 in ideal)
+BRANCH 70 DEAD (det0 in ideal)
+BRANCH 71 DEAD (det0 in ideal)
+BRANCH 72 DEAD (det0 in ideal)
+BRANCH 73 DEAD (det0 in ideal)
+BRANCH 74 DEAD (det0 in ideal)
+BRANCH 75 DEAD (det0 in ideal)
+BRANCH 76 DEAD (det0 in ideal)
+BRANCH 77 DEAD (det0 in ideal)
+BRANCH 78 DEAD (det0 in ideal)
+BRANCH 79 DEAD (det0 in ideal)
+BRANCH 80 DEAD (det0 in ideal)
+BRANCH 81 DEAD (det0 in ideal)
+BRANCH 82 DEAD (det0 in ideal)
+BRANCH 83 DEAD (det0 in ideal)
+BRANCH 84 DEAD (det0 in ideal)
+BRANCH 85 DEAD (det0 in ideal)
+BRANCH 86 DEAD (det0 in ideal)
+BRANCH 87 DEAD (det0 in ideal)
+BRANCH 88 DEAD (det0 in ideal)
+BRANCH 89 DEAD (det0 in ideal)
+BRANCH 90 DEAD (det0 in ideal)
+BRANCH 91 DEAD (det0 in ideal)
+BRANCH 92 LIVE ngens 24
+BRANCH 93 DEAD (det0 in ideal)
+BRANCH 94 DEAD (det0 in ideal)
+BRANCH 95 DEAD (det0 in ideal)
+BRANCH 96 DEAD (det0 in ideal)
+BRANCH 97 DEAD (det0 in ideal)
+BRANCH 98 DEAD (det0 in ideal)
+BRANCH 99 LIVE ngens 23
+BRANCH 100 DEAD (det0 in ideal)
+BRANCH 101 DEAD (det0 in ideal)
+BRANCH 102 DEAD (det0 in ideal)
+BRANCH 103 DEAD (det0 in ideal)
+BRANCH 104 DEAD (det0 in ideal)
+BRANCH 105 DEAD (det0 in ideal)
+BRANCH 106 DEAD (det0 in ideal)
+BRANCH 107 DEAD (det0 in ideal)
+BRANCH 108 DEAD (det0 in ideal)
+BRANCH 109 DEAD (det0 in ideal)
+BRANCH 110 LIVE ngens 27
+BRANCH 111 LIVE ngens 19
+BRANCH 112 DEAD (det0 in ideal)
+BRANCH 113 DEAD (det0 in ideal)
+BRANCH 114 DEAD (det0 in ideal)
+BRANCH 115 DEAD (det0 in ideal)
+BRANCH 116 DEAD (det0 in ideal)
+BRANCH 117 DEAD (det0 in ideal)
+BRANCH 118 DEAD (det0 in ideal)
+BRANCH 119 DEAD (det0 in ideal)
+BRANCH 120 DEAD (det0 in ideal)
+BRANCH 121 DEAD (det0 in ideal)
+BRANCH 122 DEAD (det0 in ideal)
+BRANCH 123 DEAD (det0 in ideal)
+BRANCH 124 DEAD (det0 in ideal)
+BRANCH 125 DEAD (det0 in ideal)
+BRANCH 126 DEAD (det0 in ideal)
+BRANCH 127 DEAD (det0 in ideal)
+BRANCH 128 DEAD (det0 in ideal)
+BRANCH 129 DEAD (det0 in ideal)
+BRANCH 130 DEAD (det0 in ideal)
+BRANCH 131 DEAD (det0 in ideal)
+BRANCH 132 DEAD (det0 in ideal)
+BRANCH 133 DEAD (det0 in ideal)
+BRANCH 134 DEAD (det0 in ideal)
+BRANCH 135 DEAD (det0 in ideal)
+BRANCH 136 DEAD (det0 in ideal)
+BRANCH 137 DEAD (det0 in ideal)
+BRANCH 138 DEAD (det0 in ideal)
+BRANCH 139 DEAD (det0 in ideal)
+BRANCH 140 DEAD (det0 in ideal)
+BRANCH 141 DEAD (det0 in ideal)
+BRANCH 142 DEAD (det0 in ideal)
+BRANCH 143 DEAD (det0 in ideal)
+BRANCH 144 DEAD (det0 in ideal)
+BRANCH 145 DEAD (det0 in ideal)
+BRANCH 146 DEAD (det0 in ideal)
+BRANCH 147 DEAD (det0 in ideal)
+BRANCH 148 DEAD (det0 in ideal)
+BRANCH 149 DEAD (det0 in ideal)
+BRANCH 150 DEAD (det0 in ideal)
+BRANCH 151 DEAD (det0 in ideal)
+BRANCH 152 DEAD (det0 in ideal)
+BRANCH 153 DEAD (det0 in ideal)
+BRANCH 154 DEAD (det0 in ideal)
+BRANCH 155 DEAD (det0 in ideal)
+BRANCH 156 DEAD (det0 in ideal)
+BRANCH 157 DEAD (det0 in ideal)
+BRANCH 158 DEAD (det0 in ideal)
+BRANCH 159 DEAD (det0 in ideal)
+BRANCH 160 DEAD (det0 in ideal)
+BRANCH 161 DEAD (det0 in ideal)
+BRANCH 162 DEAD (det0 in ideal)
+BRANCH 163 DEAD (det0 in ideal)
+BRANCH 164 DEAD (det0 in ideal)
+BRANCH 165 DEAD (det0 in ideal)
+BRANCH 166 DEAD (det0 in ideal)
+BRANCH 167 DEAD (det0 in ideal)
+BRANCH 168 DEAD (det0 in ideal)
+BRANCH 169 DEAD (det0 in ideal)
+BRANCH 170 DEAD (det0 in ideal)
+BRANCH 171 DEAD (det0 in ideal)
+BRANCH 172 DEAD (det0 in ideal)
+BRANCH 173 DEAD (det0 in ideal)
+BRANCH 174 DEAD (det0 in ideal)
+BRANCH 175 DEAD (det0 in ideal)
+BRANCH 176 DEAD (det0 in ideal)
+BRANCH 177 DEAD (det0 in ideal)
+BRANCH 178 DEAD (det0 in ideal)
+BRANCH 179 DEAD (det0 in ideal)
+BRANCH 180 DEAD (det0 in ideal)
+BRANCH 181 DEAD (det0 in ideal)
+BRANCH 182 DEAD (det0 in ideal)
+BRANCH 183 DEAD (det0 in ideal)
+BRANCH 184 DEAD (det0 in ideal)
+BRANCH 185 DEAD (det0 in ideal)
+BRANCH 186 DEAD (det0 in ideal)
+BRANCH 187 DEAD (det0 in ideal)
+BRANCH 188 DEAD (det0 in ideal)
+BRANCH 189 DEAD (det0 in ideal)
+BRANCH 190 DEAD (det0 in ideal)
+BRANCH 191 DEAD (det0 in ideal)
+BRANCH 192 DEAD (det0 in ideal)
+BRANCH 193 DEAD (det0 in ideal)
+BRANCH 194 DEAD (det0 in ideal)
+BRANCH 195 DEAD (det0 in ideal)
+BRANCH 196 DEAD (det0 in ideal)
+BRANCH 197 DEAD (det0 in ideal)
+BRANCH 198 DEAD (det0 in ideal)
+BRANCH 199 DEAD (det0 in ideal)
+BRANCH 200 DEAD (det0 in ideal)
+BRANCH 201 DEAD (det0 in ideal)
+BRANCH 202 DEAD (det0 in ideal)
+BRANCH 203 DEAD (det0 in ideal)
+BRANCH 204 DEAD (det0 in ideal)
+BRANCH 205 DEAD (det0 in ideal)
+BRANCH 206 DEAD (det0 in ideal)
+BRANCH 207 DEAD (det0 in ideal)
+BRANCH 208 DEAD (det0 in ideal)
+BRANCH 209 DEAD (det0 in ideal)
+BRANCH 210 DEAD (det0 in ideal)
+BRANCH 211 DEAD (det0 in ideal)
+NLIVE 19
+UNIT branch 3 k 1
+UNIT branch 3 k 2
+UNIT branch 3 k 3
+UNIT branch 4 k 1
+UNIT branch 4 k 2
+UNIT branch 4 k 3
+UNIT branch 5 k 1
+UNIT branch 5 k 2
+UNIT branch 5 k 3
+UNIT branch 8 k 1
+UNIT branch 8 k 2
+UNIT branch 8 k 3
+UNIT branch 9 k 1
+UNIT branch 9 k 2
+UNIT branch 9 k 3
+UNIT branch 11 k 1
+UNIT branch 11 k 2
+UNIT branch 11 k 3
+UNIT branch 14 k 1
+UNIT branch 14 k 2
+UNIT branch 14 k 3
+UNIT branch 20 k 1
+UNIT branch 20 k 2
+UNIT branch 20 k 3
+UNIT branch 22 k 1
+UNIT branch 22 k 2
+UNIT branch 22 k 3
+UNIT branch 24 k 1
+UNIT branch 24 k 2
+UNIT branch 24 k 3
+UNIT branch 25 k 1
+UNIT branch 25 k 2
+UNIT branch 25 k 3
+UNIT branch 36 k 1
+UNIT branch 36 k 2
+UNIT branch 36 k 3
+UNIT branch 37 k 1
+UNIT branch 37 k 2
+UNIT branch 37 k 3
+UNIT branch 56 k 1
+UNIT branch 56 k 2
+UNIT branch 56 k 3
+UNIT branch 58 k 1
+UNIT branch 58 k 2
+UNIT branch 58 k 3
+UNIT branch 92 k 1
+UNIT branch 92 k 2
+UNIT branch 92 k 3
+UNIT branch 99 k 1
+UNIT branch 99 k 2
+UNIT branch 99 k 3
+UNIT branch 110 k 1
+UNIT branch 110 k 2
+UNIT branch 110 k 3
+UNIT branch 111 k 1
+UNIT branch 111 k 2
+UNIT branch 111 k 3
+VERDICT-FACSTD system 731: EMPTY

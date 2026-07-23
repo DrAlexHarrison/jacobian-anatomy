@@ -1,50 +1,11 @@
 #!/usr/bin/env python3
-"""
-P3-Mathieu, Phase 2 — self-contained runnable certificate that the Mathieu
-conjecture is FALSE on SU(79).
+"""Checks for the SU(79) Mathieu result (see README.md for the argument).
 
-Logical chain (each link machine-checked below):
-
-  (A) L = id + H on C^79 (druzkowski/G_map.txt) is cubic-homogeneous:
-      every H_i is homogeneous of degree exactly 3, or zero.            [CHECK 1]
-  (B) L is Keller: det J L = 1.  (Full symbolic proof lives in
-      druzkowski/construct_verify.py; here: exact rational spot-checks
-      at random points + at the collision points.)                     [CHECK 2]
-  (C) L is NOT injective: three DISTINCT points P, Q, R in C^79 (exact
-      rationals, druzkowski/G_map.txt) satisfy L(P) = L(Q) = L(R).      [CHECK 3]
-      => the formal inverse F of L is NOT a polynomial: if it were, both
-      formal identities L∘F = id and F∘L = id would be polynomial
-      identities, and F∘L = id forces injectivity of L, contradicting
-      CHECK 3. A power series with finitely many nonzero homogeneous
-      parts is a polynomial, so F^{(2k+1)} != 0 for infinitely many k.  [R4]
-  (D) Mathieu's reduction (PRIMARY: Mathieu 1997 — Prop 2.2(ii), Cor 1.3/1.7,
-      Props 3.3/3.4, Formula 4.4. Zwart arXiv:2511.16561 is expository-
-      secondary: its Thm 4.23 has a proof gap at the fixed-ξ step; the sound
-      route is Mathieu's Baire-generic ξ. See audit/referee2-su79.md.)  [R1]:
-      with Q_elt = sum_i H_i ⊗ ∂_i  in S^3 C^79 ⊗ (C^79)*,
-        (Q_elt^k)_{2k·ω1}            = 0  for all k   <==  det J L = 1  (CHECK 2;
-        only this direction is proven, and only it is needed)  [D3],
-        (Q_elt^k)_{(2k+1)ω1 + ω_{78}} = k!·Σ_i F_i^{(2k+1)} ⊗ ∂_i =: Ψ(Q_elt^k).
-      Non-termination of F (from C) => Ψ(Q_elt^k) != 0 for infinitely many k.
-      This refutes Mathieu Prop 2.2(ii)'s conclusion for the graded algebra
-      A' ∗ A(2ω₁), so by Cor 1.3/1.7 (per-group at proof level; the Peter-Weyl
-      dictionary is Mathieu Lemma 1.2 = Zwart Lemmas 4.20-4.22 in v2 numbering)
-      MC(SU(79)) is FALSE: a finite-type pair (f, g) on SU(79) with
-      ∫ f^n = 0 ∀n but ∫ f^n g != 0 for infinitely many n EXISTS.
-      (Existence, not an explicit pair: an explicit (f,g) additionally
-      requires Mathieu's Cartan twist by a Baire-generic ξ — future work.) [R2]
-
-  ILLUSTRATION: we compute the low-degree homogeneous parts F^{(3)}, F^{(5)},
-  ... of the formal inverse in the SAME sparse engine and exhibit explicit
-  nonzero components (concrete Ψ(Q_elt^k) != 0), plus a NEGATIVE CONTROL — a
-  cubic-homogeneous *automorphism* whose inverse provably terminates — so the
-  machinery demonstrably can report both outcomes.
-
-Sign convention: druzkowski writes L = X + H; Mathieu/Zwart ingest X - H.
-Only H' = -H changes, same graded class; nothing downstream depends on it.
-
-Sparse, checkpointed, exact (fractions.Fraction). No CAS needed for the inverse;
-sympy used only to parse G_map.txt robustly.
+Verifies: H is cubic-homogeneous; det JL = 1 at sample rational points;
+the three-point collision, in exact arithmetic; nonzero homogeneous
+components of the formal inverse at odd degrees up to the bound (default
+11, argv[1] to change); and a terminating control map. Needs sympy (for
+parsing G_map.txt). Writes a resumable checkpoint json.
 """
 import sys, os, re, json, time
 from fractions import Fraction
@@ -100,8 +61,7 @@ def parse_gmap(path):
 
 order, VIDX, N, H = parse_gmap(GMAP)
 nz = sum(1 for h in H if h)
-log(f"CHECK 1: parsed L = id + H on C^{N}; {nz}/{N} components have nonzero H; "
-    f"every H-term verified homogeneous of degree 3.  PASS")
+log(f"check 1: L = id + H on C^{N}; {nz}/{N} components with nonzero H; all H-terms degree 3")
 assert N == 79, N
 
 # ----------------------------------------------------------------------
@@ -137,12 +97,12 @@ same = imgs["P"] == imgs["Q"] == imgs["R"]
 distinct = len({tuple(pts["P"]), tuple(pts["Q"]), tuple(pts["R"])}) == 3
 img = imgs["P"]
 # image should be the common target (0,0,-1/4,0,...,0, t=1)
-log(f"CHECK 3: L(P)=L(Q)=L(R): {same}; P,Q,R distinct: {distinct}")
+log(f"check 3: L(P)=L(Q)=L(R): {same}; P,Q,R distinct: {distinct}")
 log(f"         common image L(P) = (v1,v2,v3,t) = "
     f"({img[0]},{img[1]},{img[2]},...,{img[VIDX['t']]}); "
     f"rest zero: {all(x==0 for i,x in enumerate(img) if i not in (2, VIDX['t']))}")
 assert same and distinct, "COLLISION CHECK FAILED"
-log("CHECK 3: non-injectivity CERTIFIED (exact rational arithmetic).  PASS")
+log("check 3: collision verified in exact arithmetic")
 
 # ----------------------------------------------------------------------
 # CHECK 2: det J L = 1 — exact rational spot-checks (full symbolic proof is in
@@ -182,8 +142,7 @@ for _ in range(4):
     d = jacobian_det_at(X)
     ok &= (d == 1)
 d_at_P = jacobian_det_at(pts["P"])
-log(f"CHECK 2: det J L == 1 at 4 random rational points: {ok}; "
-    f"at collision P: {d_at_P == 1}.  PASS (full symbolic proof: druzkowski/)")
+log(f"check 2: det JL = 1 at 4 random points: {ok}; at P: {d_at_P == 1} (symbolic proof: druzkowski/)")
 assert ok and d_at_P == 1
 
 # ----------------------------------------------------------------------
@@ -263,10 +222,9 @@ def formal_inverse(H, N, D, label, ckpt=None):
         terms_total = sum(len(c) for c in F)
         if found:
             nonzero_degrees[d] = found[1:]
-            log(f"  [{label}] F^({d}) NONZERO: component {found[1]} has term "
-                f"({found[3]})·{found[2]} ...  (total stored terms: {terms_total})")
+            log(f"  [{label}] F^({d}) nonzero: component {found[1]}, term ({found[3]})*{found[2]} ({terms_total} stored terms)")
         else:
-            log(f"  [{label}] F^({d}) == 0  (total stored terms: {terms_total})")
+            log(f"  [{label}] F^({d}) = 0 ({terms_total} stored terms)")
         if ckpt:
             json.dump({"label": label, "N": N, "next_deg": d+2,
                        "nz": {str(k): v for k, v in nonzero_degrees.items()},
@@ -277,13 +235,10 @@ def formal_inverse(H, N, D, label, ckpt=None):
 # ----------------------------------------------------------------------
 # ILLUSTRATION: low-degree inverse of L (our counterexample)
 # ----------------------------------------------------------------------
-D = int(sys.argv[1]) if len(sys.argv) > 1 else 11  # 11 = the refereed run; NOTE §7 cites degrees 3-11
+D = int(sys.argv[1]) if len(sys.argv) > 1 else 11  # NOTE section 7 cites degrees 3-11
 log(f"Computing formal inverse of L to total degree {D} (sparse, checkpointed)...")
 _, nzL = formal_inverse(H, N, D, "L", ckpt=CKPT)
-log(f"ILLUSTRATION: nonzero inverse components of L at degrees "
-    f"{sorted(nzL)} (all odd; each an explicit Ψ(Q_elt^k)!=0 witness). "
-    f"Non-termination past any finite D is guaranteed by CHECK 3, not by this "
-    f"finite scan.")
+log(f"inverse of L nonzero at degrees {sorted(nzL)} (non-termination follows from check 3, not this finite scan)")
 
 # ----------------------------------------------------------------------
 # NEGATIVE CONTROL: a cubic-homogeneous *triangular automorphism* on C^3,  [R6]
@@ -307,24 +262,15 @@ def neg_control():
     N, order = savedN, savedorder
     return nz
 
-log("NEGATIVE CONTROL: cubic-homogeneous triangular automorphism on C^3 ...")
+log("control: triangular cubic automorphism on C^3")
 nzA = neg_control()
 top = max(nzA) if nzA else 0
-log(f"NEGATIVE CONTROL: inverse nonzero only at degrees {sorted(nzA)}; "
-    f"F^(d)==0 for all odd d>{top} up to 15 — inverse TERMINATES => automorphism. "
-    f"Machinery distinguishes automorphism (terminates) from L (does not).")
+log(f"control: inverse nonzero only at degrees {sorted(nzA)}; zero for odd d > {top} up to 15 (terminates)")
 
 # ----------------------------------------------------------------------
 print()
-print("="*72)
-print("CERTIFICATE: the Mathieu conjecture is FALSE on SU(79).")
-print("  CHECK 1  L = id + H on C^79 is cubic-homogeneous.               PASS")
-print("  CHECK 2  det J L = 1 (Keller) — exact spot-checks + druzkowski. PASS")
-print("  CHECK 3  L not injective: 3 distinct exact preimages collide.   PASS")
-print("  => formal inverse of L is non-terminating (no polynomial inverse)")
-print("  => Ψ(Q_elt^k) != 0 for infinitely many k, while (Q_elt^k)_{2kω1}=0 ∀k")
-print("  => MC(SU(79)) FALSE: a finite-type pair (f,g) with ∫f^n=0 ∀n, ∫f^n g≠0")
-print("     ∞-often EXISTS (explicit pair = future work via the Cartan twist).")
-print(f"  Illustration: inverse nonzero at degrees {sorted(nzL)} (Ψ witnesses).")
-print(f"  Negative control terminates at degree {top}: machinery is falsifiable.")
-print("="*72)
+print(f"checks complete: H cubic-homogeneous; det JL = 1 at sample points;")
+print(f"three distinct points collide; inverse nonzero at degrees {sorted(nzL)};")
+print(f"control inverse terminates at degree {top}.")
+print("See README.md for the statement this supports and audit/su79-review.md")
+print("for the citation chain.")

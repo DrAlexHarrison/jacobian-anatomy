@@ -1,0 +1,35 @@
+// decomposed attack, system 713: w=[3, -2, -1] sizes=[4, 6, 5]
+LIB "primdec.lib";
+ring rq = 0, (q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14), dp;
+ideal KE = 6*q14*q3*q9,12*q12*q3*q9 + 4*q14*q2*q9,2*q1*q14*q9 + 24*q11*q3*q9 - 9*q14*q3*q7,-18*q14*q3*q6,4*q0*q14*q9 + 6*q10*q3*q9 - 3*q13*q3*q8 + 3*q14*q3*q5,10*q12*q2*q9 + 6*q12*q3*q8 - 9*q13*q3*q7 - 2*q14*q2*q8 - 6*q14*q3*q4,10*q1*q12*q9 - 5*q1*q14*q8 + 20*q11*q2*q9 + 15*q11*q3*q8 - 15*q13*q3*q6 - 10*q14*q2*q7,20*q1*q11*q9 - 13*q1*q14*q7 + 9*q11*q3*q7 - 6*q12*q3*q6 - 18*q14*q2*q6,-21*q1*q14*q6 + 3*q11*q3*q6,8*q0*q12*q9 - q0*q14*q8 + 6*q10*q2*q9 + 3*q10*q3*q8 + 6*q12*q3*q5 - 3*q13*q2*q8 - 6*q13*q3*q4,16*q0*q11*q9 - 8*q0*q14*q7 + 8*q1*q10*q9 - 4*q1*q13*q8 - 4*q1*q14*q5 + 12*q11*q3*q5 + 4*q12*q2*q8 - 8*q13*q2*q7 - 8*q14*q2*q4,-15*q0*q14*q6 + 3*q1*q12*q8 - 9*q1*q13*q7 - 12*q1*q14*q4 - 3*q10*q3*q6 + 11*q11*q2*q8 + 6*q11*q3*q4 - q12*q2*q7 - 13*q13*q2*q6,10*q1*q11*q8 - 2*q1*q12*q7 - 14*q1*q13*q6 + 6*q11*q2*q7 - 6*q12*q2*q6,5*q1*q11*q7 - 7*q1*q12*q6 + q11*q2*q6,4*q0*q10*q9 - 2*q0*q13*q8 + q0*q14*q5 + 3*q10*q3*q5 - q13*q2*q5,3*q0*q12*q8 - 6*q0*q13*q7 - 6*q0*q14*q4 - 3*q1*q13*q5 + 3*q10*q2*q8 + 3*q12*q2*q5 - 6*q13*q2*q4,8*q0*q11*q8 - q0*q12*q7 - 10*q0*q13*q6 + 4*q1*q10*q8 + q1*q12*q5 - 8*q1*q13*q4 + q10*q2*q7 + 7*q11*q2*q5 - 2*q12*q2*q4,4*q0*q11*q7 - 5*q0*q12*q6 + 2*q1*q10*q7 + 5*q1*q11*q5 - 4*q1*q12*q4 - q10*q2*q6 + 2*q11*q2*q4,2*q0*q10*q8 + 2*q0*q12*q5 - 4*q0*q13*q4 + 2*q10*q2*q5,q0*q10*q7 + 4*q0*q11*q5 - 2*q0*q12*q4 + 2*q1*q10*q5;
+poly det0 = q0*q10*q5;
+list MA = minAssGTZ(KE);
+"NCOMP", size(MA);
+int i; int kk; int bad = 0; int nlive = 0;
+intvec LIVEV; LIVEV[size(MA)] = 0;
+for (i = 1; i <= size(MA); i++) {
+  MA[i] = std(MA[i]);
+  if (reduce(det0, MA[i]) == 0) { LIVEV[i] = 0; "COMPONENT", i, "DEAD (det0 in P)"; }
+  else { LIVEV[i] = 1; nlive++; "COMPONENT", i, "LIVE:"; MA[i]; }
+}
+"NLIVE", nlive;
+ring rf = 0, (q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, x, y, z, X, Y, Z, t, s), dp;
+ideal KEf = imap(rq, KE); poly det0f = imap(rq, det0);
+ideal COLL = -X^3*Y^3*q3 - X^2*Y*Z*q2 - X^2*Z^3*q1 - X*q0 + q0*x + q1*x^2*z^3 + q2*x^2*y*z + q3*x^3*y^3,-X^2*Y^4*q9 - X*Y^2*Z*q8 - X*Y*Z^3*q7 - X*Z^5*q6 - Y*q5 - Z^2*q4 + q4*z^2 + q5*y + q6*x*z^5 + q7*x*y*z^3 + q8*x*y^2*z + q9*x^2*y^4,-X^2*Y^3*Z*q14 - X*Y^2*q13 - X*Y*Z^2*q12 - X*Z^4*q11 - Z*q10 + q10*z + q11*x*z^4 + q12*x*y*z^2 + q13*x*y^2 + q14*x^2*y^3*z;
+list MAf = imap(rq, MA);
+ideal diffs = x-X, y-Y, z-Z;
+int ncoll = 0;
+for (i = 1; i <= size(MAf); i++) {
+  if (LIVEV[i] == 1) {
+    for (kk = 1; kk <= 3; kk++) {
+      ideal I = KEf, MAf[i], COLL, t*diffs[kk]-1, s*det0f-1;
+      ideal G = groebner(I);
+      if (reduce(1, G) != 0) { bad = 1; "NONUNIT comp", i, "k", kk; }
+      else { "UNIT comp", i, "k", kk; }
+      kill I; kill G;
+    }
+  }
+}
+if (bad == 0) { "VERDICT-DECOMPOSED system 713: EMPTY"; }
+else { "VERDICT-DECOMPOSED system 713: NONUNIT COMPONENT FOUND -- INVESTIGATE"; }
+exit;

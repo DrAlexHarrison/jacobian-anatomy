@@ -1,0 +1,18 @@
+// system 325: w=[3, -11, 4] sizes=[2, 2, 3] maxdeg=6
+ring r = 0, (q0, q1, q2, q3, q4, q5, q6, x, y, z, X, Y, Z, t, s), dp;
+ideal KE = -12*q1*q3*q6,-2*q0*q3*q6 - 10*q1*q2*q6,5*q1*q3*q5,4*q0*q3*q5 + 4*q1*q2*q5 + 3*q1*q3*q4,3*q0*q2*q5 + 2*q0*q3*q4 + 2*q1*q2*q4;
+poly det0 = q0*q2*q4;
+ideal COLL = -X^2*Y*Z^2*q1 - X*q0 + q0*x + q1*x^2*y*z^2,-X*Y^2*Z^2*q3 - Y*q2 + q2*y + q3*x*y^2*z^2,-X^5*Y*q6 - X*Y*Z^3*q5 - Z*q4 + q4*z + q5*x*y*z^3 + q6*x^5*y;
+int allunit = 1;
+ideal I0 = KE, COLL, t*(x-X)-1, s*det0-1;
+ideal G0 = groebner(I0);
+if (reduce(1, G0) != 0) { allunit = 0; "NONUNIT k=0 system 325"; }
+ideal I1 = KE, COLL, t*(y-Y)-1, s*det0-1;
+ideal G1 = groebner(I1);
+if (reduce(1, G1) != 0) { allunit = 0; "NONUNIT k=1 system 325"; }
+ideal I2 = KE, COLL, t*(z-Z)-1, s*det0-1;
+ideal G2 = groebner(I2);
+if (reduce(1, G2) != 0) { allunit = 0; "NONUNIT k=2 system 325"; }
+if (allunit == 1) { "VERDICT system 325: EMPTY (no equivariant Keller counterexample in this family)"; }
+else { "VERDICT system 325: NONEMPTY -- WITNESS HUNT REQUIRED"; }
+exit;

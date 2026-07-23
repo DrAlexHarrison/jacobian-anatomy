@@ -1,0 +1,28 @@
+residue: 20 systems: 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 
+706 rc=0 dt=0s nlive=4 unit=12 nonunit=0 VERDICT-FACSTD system 706: EMPTY
+DEG7CTRL rc=124 dt=1800s 
+708 rc=0 dt=1s nlive=19 unit=57 nonunit=0 VERDICT-FACSTD system 708: EMPTY
+707 rc=0 dt=2s nlive=8 unit=24 nonunit=0 VERDICT-FACSTD system 707: EMPTY
+709 rc=0 dt=2s nlive=41 unit=123 nonunit=0 VERDICT-FACSTD system 709: EMPTY
+711 rc=0 dt=1s nlive=19 unit=57 nonunit=0 VERDICT-FACSTD system 711: EMPTY
+712 rc=0 dt=1s nlive=13 unit=39 nonunit=0 VERDICT-FACSTD system 712: EMPTY
+713 rc=0 dt=1s nlive=13 unit=39 nonunit=0 VERDICT-FACSTD system 713: EMPTY
+710 rc=0 dt=13s nlive=47 unit=141 nonunit=0 VERDICT-FACSTD system 710: EMPTY
+715 rc=0 dt=78s nlive=16 unit=48 nonunit=0 VERDICT-FACSTD system 715: EMPTY
+716 rc=0 dt=164s nlive=18 unit=54 nonunit=0 VERDICT-FACSTD system 716: EMPTY
+717 rc=0 dt=88s nlive=22 unit=66 nonunit=0 VERDICT-FACSTD system 717: EMPTY
+718 rc=0 dt=1s nlive=3 unit=9 nonunit=0 VERDICT-FACSTD system 718: EMPTY
+719 rc=0 dt=2s nlive=4 unit=12 nonunit=0 VERDICT-FACSTD system 719: EMPTY
+714 rc=0 dt=726s nlive=23 unit=69 nonunit=0 VERDICT-FACSTD system 714: EMPTY
+720 rc=124 dt=1801s nlive=? unit=0 nonunit=0 NO-VERDICT
+721 rc=124 dt=1801s nlive=? unit=0 nonunit=0 NO-VERDICT
+722 rc=124 dt=1801s nlive=? unit=0 nonunit=0 NO-VERDICT
+724 rc=0 dt=8s nlive=1 unit=3 nonunit=0 VERDICT-FACSTD system 724: EMPTY
+725 rc=0 dt=8s nlive=1 unit=3 nonunit=0 VERDICT-FACSTD system 725: EMPTY
+723 rc=124 dt=1801s nlive=? unit=0 nonunit=0 NO-VERDICT
+Z737 rc=124 dt=1800s unit=0 nonunit=0 NO-VERDICT
+Z736 rc=124 dt=1800s unit=0 nonunit=0 NO-VERDICT
+Z738 rc=124 dt=1800s unit=0 nonunit=0 NO-VERDICT
+Z739 rc=124 dt=1801s unit=0 nonunit=0 NO-VERDICT
+Z740 rc=124 dt=1800s unit=0 nonunit=0 NO-VERDICT
+SECONDPASS DONE Mon Jul 20 11:32:31 PM MDT 2026

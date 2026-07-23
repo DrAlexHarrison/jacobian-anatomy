@@ -1,0 +1,12 @@
+NCOMP 1
+COMPONENT 1 LIVE ngens 6
+// ** redefining ev (v = MA[i][j]; for (kk = 1; kk <= 7; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z1.sing:18
+// ** redefining ev (v = MA[i][j]; for (kk = 1; kk <= 7; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z1.sing:18
+// ** redefining ev (v = MA[i][j]; for (kk = 1; kk <= 7; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z1.sing:18
+// ** redefining ev (v = MA[i][j]; for (kk = 1; kk <= 7; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z1.sing:18
+// ** redefining ev (v = MA[i][j]; for (kk = 1; kk <= 7; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z1.sing:18
+ALPOGE POINT IN COMPONENT 1 LIVE = 1
+NONUNIT comp 1 k 1
+NONUNIT comp 1 k 2
+NONUNIT comp 1 k 3
+CONTROL PASS: NONUNIT component found (as it must be)

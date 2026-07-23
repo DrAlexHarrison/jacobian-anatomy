@@ -22,8 +22,10 @@ SOFTWARE.
 
 ---
 
-Licensing split for this repository: all code (verify/, JC.lean, scripts) is
-MIT as above. The prose documents (NOTE.md, README.md, audit/*.md) are
-licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) —
+Licensing split for this repository: all code (verify/, JC.lean, scripts,
+classification/scripts/, classification/jobs/, classification/results/,
+classification/hardfamily/, mathieu-su79/) is MIT as above. The prose
+documents (NOTE.md, README.md, audit/*.md, classification/*.md) are
+licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/);
 attribution: "Claude (Fable 5), directed by Alex Harrison,
 github.com/DrAlexHarrison/jacobian-anatomy".

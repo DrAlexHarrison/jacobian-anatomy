@@ -1,0 +1,174 @@
+NCOMP 27
+COMPONENT 1 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 2 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 3 LIVE ngens 19
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 4 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 5 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 6 LIVE ngens 37
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 7 LIVE ngens 23
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 8 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 9 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 10 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 11 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 12 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 13 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 14 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 15 LIVE ngens 61
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+ALPOGE POINT IN COMPONENT 15 LIVE = 1
+COMPONENT 16 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 17 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 18 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 19 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 20 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 21 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 22 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 23 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 24 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 25 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 26 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+COMPONENT 27 DEAD
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 19; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z4.sing:18
+UNIT comp 3 k 1
+UNIT comp 3 k 2
+UNIT comp 3 k 3
+UNIT comp 6 k 1
+UNIT comp 6 k 2
+UNIT comp 6 k 3
+UNIT comp 7 k 1
+UNIT comp 7 k 2
+UNIT comp 7 k 3
+
+halt 1

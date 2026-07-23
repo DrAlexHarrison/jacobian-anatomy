@@ -1,0 +1,26 @@
+NCOMP 3
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+ALPOGE POINT IN COMPONENT 2 LIVE = 1
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+// ** redefining ev ( = MA[i][j]; for (kk = 1; kk <= 16; kk++) { ev = subst(ev, var(kk), PT[kk]); }) adeg7z2m.sing:18
+NONUNIT comp 2 k 1
+NONUNIT comp 2 k 2
+NONUNIT comp 2 k 3
+CONTROL PASS: point component NONUNIT (as it must be)

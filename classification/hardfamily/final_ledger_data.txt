@@ -1,0 +1,12 @@
+members with a direct machine EMPTY certificate: 730
+  monolith stream: 657; decomposed stream: 77; both: 4
+classes with a DIRECT machine certificate: 365
+classes hand-proved: 6: [([720, 723], 'Thm 26.1'), ([721, 722], 'Thm 26.1'), ([728, 729], 'Thm 26.1'), ([734, 735], 'Thm 35.1 (f0735 by transfer)'), ([738, 739], 'Thm 10.1'), ([740], 'Thm 4.2/10.1')]
+classes UNCOVERED: 0: []
+TOTAL: 371 (must be 371)
+  [720, 723] [Thm 26.1] members: ['f0720:hand', 'f0723:hand']
+  [721, 722] [Thm 26.1] members: ['f0721:hand', 'f0722:hand']
+  [728, 729] [Thm 26.1] members: ['f0728:hand', 'f0729:hand']
+  [734, 735] [Thm 35.1 (f0735 by transfer)] members: ['f0734:hand', 'f0735:transfer']
+  [738, 739] [Thm 10.1] members: ['f0738:hand', 'f0739:hand']
+  [740] [Thm 4.2/10.1] members: ['f0740:hand']

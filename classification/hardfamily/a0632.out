@@ -1,0 +1,18 @@
+NCOMP 6
+COMPONENT 1 DEAD (det0 in P)
+COMPONENT 2 DEAD (det0 in P)
+COMPONENT 3 DEAD (det0 in P)
+COMPONENT 4 LIVE:
+_[1]=q8
+_[2]=q7
+_[3]=q5
+_[4]=q4
+_[5]=q2
+_[6]=q1
+COMPONENT 5 DEAD (det0 in P)
+COMPONENT 6 DEAD (det0 in P)
+NLIVE 1
+UNIT comp 4 k 1
+UNIT comp 4 k 2
+UNIT comp 4 k 3
+VERDICT-DECOMPOSED system 632: EMPTY

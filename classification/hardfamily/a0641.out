@@ -1,0 +1,20 @@
+NCOMP 8
+COMPONENT 1 DEAD (det0 in P)
+COMPONENT 2 DEAD (det0 in P)
+COMPONENT 3 LIVE:
+_[1]=q9
+_[2]=q8
+_[3]=q6
+_[4]=q5
+_[5]=q2
+_[6]=q1
+COMPONENT 4 DEAD (det0 in P)
+COMPONENT 5 DEAD (det0 in P)
+COMPONENT 6 DEAD (det0 in P)
+COMPONENT 7 DEAD (det0 in P)
+COMPONENT 8 DEAD (det0 in P)
+NLIVE 1
+UNIT comp 3 k 1
+UNIT comp 3 k 2
+UNIT comp 3 k 3
+VERDICT-DECOMPOSED system 641: EMPTY

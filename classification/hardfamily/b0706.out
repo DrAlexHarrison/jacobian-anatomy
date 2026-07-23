@@ -1,0 +1,69 @@
+NBRANCH 54
+BRANCH 1 DEAD (det0 in ideal)
+BRANCH 2 LIVE ngens 11
+BRANCH 3 LIVE ngens 11
+BRANCH 4 DEAD (det0 in ideal)
+BRANCH 5 DEAD (det0 in ideal)
+BRANCH 6 DEAD (det0 in ideal)
+BRANCH 7 DEAD (det0 in ideal)
+BRANCH 8 DEAD (det0 in ideal)
+BRANCH 9 DEAD (det0 in ideal)
+BRANCH 10 DEAD (det0 in ideal)
+BRANCH 11 DEAD (det0 in ideal)
+BRANCH 12 DEAD (det0 in ideal)
+BRANCH 13 DEAD (det0 in ideal)
+BRANCH 14 DEAD (det0 in ideal)
+BRANCH 15 DEAD (det0 in ideal)
+BRANCH 16 DEAD (det0 in ideal)
+BRANCH 17 DEAD (det0 in ideal)
+BRANCH 18 DEAD (det0 in ideal)
+BRANCH 19 DEAD (det0 in ideal)
+BRANCH 20 DEAD (det0 in ideal)
+BRANCH 21 DEAD (det0 in ideal)
+BRANCH 22 DEAD (det0 in ideal)
+BRANCH 23 DEAD (det0 in ideal)
+BRANCH 24 DEAD (det0 in ideal)
+BRANCH 25 DEAD (det0 in ideal)
+BRANCH 26 LIVE ngens 14
+BRANCH 27 DEAD (det0 in ideal)
+BRANCH 28 DEAD (det0 in ideal)
+BRANCH 29 LIVE ngens 14
+BRANCH 30 DEAD (det0 in ideal)
+BRANCH 31 DEAD (det0 in ideal)
+BRANCH 32 DEAD (det0 in ideal)
+BRANCH 33 DEAD (det0 in ideal)
+BRANCH 34 DEAD (det0 in ideal)
+BRANCH 35 DEAD (det0 in ideal)
+BRANCH 36 DEAD (det0 in ideal)
+BRANCH 37 DEAD (det0 in ideal)
+BRANCH 38 DEAD (det0 in ideal)
+BRANCH 39 DEAD (det0 in ideal)
+BRANCH 40 DEAD (det0 in ideal)
+BRANCH 41 DEAD (det0 in ideal)
+BRANCH 42 DEAD (det0 in ideal)
+BRANCH 43 DEAD (det0 in ideal)
+BRANCH 44 DEAD (det0 in ideal)
+BRANCH 45 DEAD (det0 in ideal)
+BRANCH 46 DEAD (det0 in ideal)
+BRANCH 47 DEAD (det0 in ideal)
+BRANCH 48 DEAD (det0 in ideal)
+BRANCH 49 DEAD (det0 in ideal)
+BRANCH 50 DEAD (det0 in ideal)
+BRANCH 51 DEAD (det0 in ideal)
+BRANCH 52 DEAD (det0 in ideal)
+BRANCH 53 DEAD (det0 in ideal)
+BRANCH 54 DEAD (det0 in ideal)
+NLIVE 4
+UNIT branch 2 k 1
+UNIT branch 2 k 2
+UNIT branch 2 k 3
+UNIT branch 3 k 1
+UNIT branch 3 k 2
+UNIT branch 3 k 3
+UNIT branch 26 k 1
+UNIT branch 26 k 2
+UNIT branch 26 k 3
+UNIT branch 29 k 1
+UNIT branch 29 k 2
+UNIT branch 29 k 3
+VERDICT-FACSTD system 706: EMPTY

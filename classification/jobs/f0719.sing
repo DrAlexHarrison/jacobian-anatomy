@@ -1,0 +1,18 @@
+// system 719: w=[2, -2, -1] sizes=[5, 7, 5] maxdeg=6
+ring r = 0, (q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, x, y, z, X, Y, Z, t, s), dp;
+ideal KE = 5*q11*q16*q4,-2*q10*q16*q4 + 15*q11*q15*q4 + 3*q11*q16*q3,8*q10*q15*q4 - 4*q10*q16*q3 + 13*q11*q15*q3,6*q10*q15*q3,5*q11*q14*q4 + 4*q11*q16*q2 + 4*q16*q4*q9,2*q1*q11*q16 - 2*q10*q16*q2 + 15*q11*q13*q4 + 5*q11*q14*q3 + 12*q11*q15*q2 + 12*q15*q4*q9 + q16*q3*q9 - 3*q16*q4*q8,-4*q1*q10*q16 + 10*q1*q11*q15 + 10*q10*q13*q4 + 6*q10*q15*q2 + 15*q11*q13*q3 + 9*q15*q3*q9 + 5*q15*q4*q8 - 6*q16*q3*q8 - 10*q16*q4*q7,4*q1*q10*q15 + 10*q10*q13*q3 + 2*q15*q3*q8 - 2*q15*q4*q7 - 13*q16*q3*q7,-5*q15*q3*q7,3*q0*q11*q16 + 5*q11*q12*q4 + 4*q11*q14*q2 + 4*q14*q4*q9 + 3*q16*q2*q9 + 3*q16*q4*q6,-2*q0*q10*q16 + 9*q0*q11*q15 + 4*q1*q11*q14 + 2*q10*q12*q4 + 7*q11*q12*q3 + 12*q11*q13*q2 + 12*q13*q4*q9 + 3*q14*q3*q9 - q14*q4*q8 + 9*q15*q2*q9 + 9*q15*q4*q6 - 3*q16*q2*q8 - q16*q3*q6 - 4*q16*q4*q5,4*q0*q10*q15 + 12*q1*q11*q13 + 6*q1*q15*q9 - 6*q1*q16*q8 + 4*q10*q12*q3 + 8*q10*q13*q2 + 11*q13*q3*q9 + 7*q13*q4*q8 - 2*q14*q3*q8 - 6*q14*q4*q7 + 3*q15*q2*q8 + 5*q15*q3*q6 + 2*q15*q4*q5 - 9*q16*q2*q7 - 8*q16*q3*q5,8*q1*q10*q13 - 12*q1*q16*q7 + 6*q13*q3*q8 + 2*q13*q4*q7 - 7*q14*q3*q7 - 3*q15*q2*q7 - 2*q15*q3*q5,-6*q1*q15*q7 + q13*q3*q7,3*q0*q11*q14 + 2*q0*q16*q9 + 4*q11*q12*q2 + 4*q12*q4*q9 + 3*q14*q2*q9 + 3*q14*q4*q6 + 2*q16*q2*q6,9*q0*q11*q13 + 6*q0*q15*q9 - 3*q0*q16*q8 + 6*q1*q11*q12 + 2*q1*q14*q9 - 2*q1*q16*q6 + 2*q10*q12*q2 + 5*q12*q3*q9 + q12*q4*q8 + 9*q13*q2*q9 + 9*q13*q4*q6 - q14*q2*q8 + q14*q3*q6 - 2*q14*q4*q5 + 6*q15*q2*q6 - 4*q16*q2*q5,6*q0*q10*q13 + q0*q15*q8 - 8*q0*q16*q7 + 4*q1*q10*q12 + 8*q1*q13*q9 - 2*q1*q14*q8 + 2*q1*q15*q6 - 8*q1*q16*q5 + 2*q12*q3*q8 - 2*q12*q4*q7 + 5*q13*q2*q8 + 7*q13*q3*q6 + 4*q13*q4*q5 - 5*q14*q2*q7 - 4*q14*q3*q5,-4*q0*q15*q7 + 4*q1*q13*q8 - 6*q1*q14*q7 - 4*q1*q15*q5 - q12*q3*q7 + q13*q2*q7 + 2*q13*q3*q5,3*q0*q11*q12 + 2*q0*q14*q9 + q0*q16*q6 + 3*q12*q2*q9 + 3*q12*q4*q6 + 2*q14*q2*q6,2*q0*q10*q12 + 6*q0*q13*q9 - q0*q14*q8 + 3*q0*q15*q6 - 4*q0*q16*q5 + 4*q1*q12*q9 + q12*q2*q8 + 3*q12*q3*q6 + 6*q13*q2*q6 - 2*q14*q2*q5,3*q0*q13*q8 - 4*q0*q14*q7 - 2*q0*q15*q5 + 2*q1*q12*q8 + 4*q1*q13*q6 - 4*q1*q14*q5 - q12*q2*q7 + 2*q13*q2*q5,2*q0*q12*q9 + q0*q14*q6 + 2*q12*q2*q6,q0*q12*q8 + 3*q0*q13*q6 - 2*q0*q14*q5 + 2*q1*q12*q6;
+poly det0 = q0*q12*q6;
+ideal COLL = -X^3*Y^2*q4 - X^3*Y*Z^2*q3 - X^2*Y*q2 - X^2*Z^2*q1 - X*q0 + q0*x + q1*x^2*z^2 + q2*x^2*y + q3*x^3*y*z^2 + q4*x^3*y^2,-X^2*Y^3*q11 - X^2*Y^2*Z^2*q10 - X*Y^2*q9 - X*Y*Z^2*q8 - X*Z^4*q7 - Y*q6 - Z^2*q5 + q10*x^2*y^2*z^2 + q11*x^2*y^3 + q5*z^2 + q6*y + q7*x*z^4 + q8*x*y*z^2 + q9*x*y^2,-X^2*Y^2*Z*q16 - X^2*Y*Z^3*q15 - X*Y*Z*q14 - X*Z^3*q13 - Z*q12 + q12*z + q13*x*z^3 + q14*x*y*z + q15*x^2*y*z^3 + q16*x^2*y^2*z;
+int allunit = 1;
+ideal I0 = KE, COLL, t*(x-X)-1, s*det0-1;
+ideal G0 = groebner(I0);
+if (reduce(1, G0) != 0) { allunit = 0; "NONUNIT k=0 system 719"; }
+ideal I1 = KE, COLL, t*(y-Y)-1, s*det0-1;
+ideal G1 = groebner(I1);
+if (reduce(1, G1) != 0) { allunit = 0; "NONUNIT k=1 system 719"; }
+ideal I2 = KE, COLL, t*(z-Z)-1, s*det0-1;
+ideal G2 = groebner(I2);
+if (reduce(1, G2) != 0) { allunit = 0; "NONUNIT k=2 system 719"; }
+if (allunit == 1) { "VERDICT system 719: EMPTY (no equivariant Keller counterexample in this family)"; }
+else { "VERDICT system 719: NONEMPTY -- WITNESS HUNT REQUIRED"; }
+exit;

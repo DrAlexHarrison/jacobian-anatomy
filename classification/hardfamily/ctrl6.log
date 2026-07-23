@@ -1,0 +1,4 @@
+CTRL6 START Tue Jul 21 01:34:49 AM MDT 2026
+Z5E-22FREE-ZERO rc=0 dt=1606s NCOMP 194 ALPOGE POINT IN COMPONENT 83 LIVE = 1 ZERO-WITNESS k 1: all generators vanish at the explicit collision pair => system NONUNIT ZERO-WITNESS k 2: all generators vanish at the explicit collision pair => system NONUNIT ZERO-WITNESS k 3: all generators vanish at the explicit collision pair => system NONUNIT CONTROL PASS (explicit-zero route) if three ZERO-WITNESS lines above 
+Z6E-24FREE-ZERO rc=124 dt=10800s NO-OUTPUT
+CTRL6 DONE Tue Jul 21 05:01:35 AM MDT 2026

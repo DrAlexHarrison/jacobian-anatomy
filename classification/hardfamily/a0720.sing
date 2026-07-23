@@ -1,0 +1,35 @@
+// decomposed attack, system 720: w=[1, -3, 1] sizes=[7, 5, 7]
+LIB "primdec.lib";
+ring rq = 0, (q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18), dp;
+ideal KE = 5*q11*q17*q6 - 5*q11*q18*q5,5*q10*q17*q6 - 5*q10*q18*q5 + 10*q11*q16*q6 - 10*q11*q18*q4,10*q10*q16*q6 - 10*q10*q18*q4 + 15*q11*q15*q6 + 5*q11*q16*q5 - 5*q11*q17*q4 - 15*q11*q18*q3 + 5*q17*q6*q9 - 5*q18*q5*q9,-20*q1*q11*q18 + 15*q10*q15*q6 + 5*q10*q16*q5 - 5*q10*q17*q4 - 15*q10*q18*q3 + 20*q11*q13*q6 + 10*q11*q15*q5 - 10*q11*q17*q3 + 10*q16*q6*q9 + 5*q17*q6*q8 - 10*q18*q4*q9 - 5*q18*q5*q8,-5*q0*q11*q18 + q10*q14*q6 - q10*q18*q2 + 5*q11*q12*q6 - 2*q11*q14*q5 + 2*q11*q17*q2 + 4*q17*q6*q7 - 4*q18*q5*q7,-20*q1*q10*q18 - 15*q1*q11*q17 + 20*q10*q13*q6 + 10*q10*q15*q5 - 10*q10*q17*q3 + 15*q11*q13*q5 + 5*q11*q15*q4 - 5*q11*q16*q3 + 15*q15*q6*q9 + 5*q16*q5*q9 + 10*q16*q6*q8 - 5*q17*q4*q9 - 15*q18*q3*q9 - 10*q18*q4*q8,-6*q0*q10*q18 - 3*q0*q11*q17 + 6*q10*q12*q6 - q10*q14*q5 + q10*q17*q2 + 3*q11*q12*q5 - 4*q11*q14*q4 + 4*q11*q16*q2 + 2*q14*q6*q9 + 8*q16*q6*q7 - 2*q18*q2*q9 - 8*q18*q4*q7,-15*q1*q10*q17 - 10*q1*q11*q16 - 20*q1*q18*q9 + 15*q10*q13*q5 + 5*q10*q15*q4 - 5*q10*q16*q3 + 10*q11*q13*q4 + 20*q13*q6*q9 + 10*q15*q5*q9 + 15*q15*q6*q8 + 5*q16*q5*q8 - 10*q17*q3*q9 - 5*q17*q4*q8 - 15*q18*q3*q8,-4*q0*q10*q17 - q0*q11*q16 - 7*q0*q18*q9 + 4*q10*q12*q5 - 3*q10*q14*q4 + 3*q10*q16*q2 + q11*q12*q4 - 6*q11*q14*q3 + 6*q11*q15*q2 + 7*q12*q6*q9 + 3*q14*q6*q8 + 12*q15*q6*q7 + 4*q16*q5*q7 - 4*q17*q4*q7 - 3*q18*q2*q8 - 12*q18*q3*q7,-10*q1*q10*q16 - 5*q1*q11*q15 - 15*q1*q17*q9 - 20*q1*q18*q8 + 10*q10*q13*q4 + 5*q11*q13*q3 + 15*q13*q5*q9 + 20*q13*q6*q8 + 5*q15*q4*q9 + 10*q15*q5*q8 - 5*q16*q3*q9 - 10*q17*q3*q8,-2*q0*q10*q16 + q0*q11*q15 - 5*q0*q17*q9 - 8*q0*q18*q8 - 8*q1*q11*q14 - 16*q1*q18*q7 + 2*q10*q12*q4 - 5*q10*q14*q3 + 5*q10*q15*q2 - q11*q12*q3 + 8*q11*q13*q2 + 5*q12*q5*q9 + 8*q12*q6*q8 + 16*q13*q6*q7 - 2*q14*q4*q9 + q14*q5*q8 + 8*q15*q5*q7 + 2*q16*q2*q9 - q17*q2*q8 - 8*q17*q3*q7,-2*q0*q11*q14 - 4*q0*q18*q7 + 2*q11*q12*q2 + 4*q12*q6*q7 - q14*q5*q7 + q17*q2*q7,-5*q1*q10*q15 - 10*q1*q16*q9 - 15*q1*q17*q8 + 5*q10*q13*q3 + 10*q13*q4*q9 + 15*q13*q5*q8 + 5*q15*q4*q8 - 5*q16*q3*q8,3*q0*q11*q13 - 3*q0*q16*q9 - 6*q0*q17*q8 - 7*q1*q10*q14 - 3*q1*q11*q12 - 12*q1*q17*q7 + 7*q10*q13*q2 + 3*q12*q4*q9 + 6*q12*q5*q8 + 12*q13*q5*q7 - 4*q14*q3*q9 - q14*q4*q8 + 4*q15*q2*q9 + 4*q15*q4*q7 + q16*q2*q8 - 4*q16*q3*q7,-2*q0*q10*q14 - 3*q0*q17*q7 + 2*q10*q12*q2 + 3*q12*q5*q7 - 2*q14*q4*q7 + 2*q16*q2*q7,-5*q1*q15*q9 - 10*q1*q16*q8 + 5*q13*q3*q9 + 10*q13*q4*q8,2*q0*q10*q13 - q0*q15*q9 - 4*q0*q16*q8 - 2*q1*q10*q12 - 6*q1*q14*q9 - 8*q1*q16*q7 + q12*q3*q9 + 4*q12*q4*q8 + 6*q13*q2*q9 + 8*q13*q4*q7 - 3*q14*q3*q8 + 3*q15*q2*q8,-2*q0*q14*q9 - 2*q0*q16*q7 + 2*q12*q2*q9 + 2*q12*q4*q7 - 3*q14*q3*q7 + 3*q15*q2*q7,-5*q1*q15*q8 + 5*q13*q3*q8,q0*q13*q9 - 2*q0*q15*q8 - q1*q12*q9 - 5*q1*q14*q8 - 4*q1*q15*q7 + 2*q12*q3*q8 + 5*q13*q2*q8 + 4*q13*q3*q7,-2*q0*q14*q8 - q0*q15*q7 - 4*q1*q14*q7 + 2*q12*q2*q8 + q12*q3*q7 + 4*q13*q2*q7;
+poly det0 = -q0*q14*q7 + q12*q2*q7;
+list MA = minAssGTZ(KE);
+"NCOMP", size(MA);
+int i; int kk; int bad = 0; int nlive = 0;
+intvec LIVEV; LIVEV[size(MA)] = 0;
+for (i = 1; i <= size(MA); i++) {
+  MA[i] = std(MA[i]);
+  if (reduce(det0, MA[i]) == 0) { LIVEV[i] = 0; "COMPONENT", i, "DEAD (det0 in P)"; }
+  else { LIVEV[i] = 1; nlive++; "COMPONENT", i, "LIVE:"; MA[i]; }
+}
+"NLIVE", nlive;
+ring rf = 0, (q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, x, y, z, X, Y, Z, t, s), dp;
+ideal KEf = imap(rq, KE); poly det0f = imap(rq, det0);
+ideal COLL = -X^4*Y*q6 - X^3*Y*Z*q5 - X^2*Y*Z^2*q4 - X*Y*Z^3*q3 - X*q2 - Y*Z^4*q1 - Z*q0 + q0*z + q1*y*z^4 + q2*x + q3*x*y*z^3 + q4*x^2*y*z^2 + q5*x^3*y*z + q6*x^4*y,-X^3*Y^2*q11 - X^2*Y^2*Z*q10 - X*Y^2*Z^2*q9 - Y^2*Z^3*q8 - Y*q7 + q10*x^2*y^2*z + q11*x^3*y^2 + q7*y + q8*y^2*z^3 + q9*x*y^2*z^2,-X^4*Y*q18 - X^3*Y*Z*q17 - X^2*Y*Z^2*q16 - X*Y*Z^3*q15 - X*q14 - Y*Z^4*q13 - Z*q12 + q12*z + q13*y*z^4 + q14*x + q15*x*y*z^3 + q16*x^2*y*z^2 + q17*x^3*y*z + q18*x^4*y;
+list MAf = imap(rq, MA);
+ideal diffs = x-X, y-Y, z-Z;
+int ncoll = 0;
+for (i = 1; i <= size(MAf); i++) {
+  if (LIVEV[i] == 1) {
+    for (kk = 1; kk <= 3; kk++) {
+      ideal I = KEf, MAf[i], COLL, t*diffs[kk]-1, s*det0f-1;
+      ideal G = groebner(I);
+      if (reduce(1, G) != 0) { bad = 1; "NONUNIT comp", i, "k", kk; }
+      else { "UNIT comp", i, "k", kk; }
+      kill I; kill G;
+    }
+  }
+}
+if (bad == 0) { "VERDICT-DECOMPOSED system 720: EMPTY"; }
+else { "VERDICT-DECOMPOSED system 720: NONUNIT COMPONENT FOUND -- INVESTIGATE"; }
+exit;

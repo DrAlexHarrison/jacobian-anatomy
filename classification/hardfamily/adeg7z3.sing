@@ -1,0 +1,42 @@
+// FROZEN NEGATIVE CONTROL Z3-block2-10free: deg-7 Alpoge subfamily, 10 free coefficients, route minass
+LIB "primdec.lib";
+ring rq = 0, (q7, q8, q9, q10, q11, q12, q13, q14, q15, q16), dp;
+ideal KE = -30*q16,-30*q16,-18*q15 - 198*q16,-24*q13 - 12*q15 - 156*q16,-6*q12 + 18*q14 - 126*q15 - 324*q16,12*q11 - 36*q14,-24*q13 + 6*q15 + 22*q16,-12*q10 + 6*q12 - 144*q13 + 18*q14 - 84*q15 - 162*q16,36*q11 - 54*q12 + 12*q14 - 216*q15 + 6*q9,36*q11 - 108*q14,-6*q10 + 12*q12 - 108*q13 + 18*q15 + 126*q16 - 18*q8,-72*q10 + 24*q11 - 12*q12 - 216*q13 + 12*q14 - 108*q15 + 24*q9,84*q11 - 108*q12 - 54*q14 + 18*q9,6*q10 + 20*q13 - 6*q15 + 6*q16 - 18*q8,-36*q10 + 14*q12 - 108*q13 - 18*q14 + 84*q15 + 12*q7 - 90*q8 + 18*q9,-108*q10 + 8*q11 - 54*q12 + 42*q14 + 60*q9,16*q10 - 12*q12 + 84*q13 + 4*q15 + 12*q7 - 60*q8,-54*q10 - 24*q11 + 42*q12 + 2*q14 + 36*q7 - 108*q8 + 10*q9,-6*q10 + 4*q13 + 18*q8,42*q10 + 2*q12 + 12*q7 - 54*q8 - 18*q9,2*q10 - 12*q7 + 42*q8;
+poly det0 = 2*q8;
+intvec PT = 4,1,7,3,3,3,0,1,0,0;
+list MA = minAssGTZ(KE);
+"NCOMP", size(MA);
+int i; int j; int kk; int bad = 0; int hit;
+intvec LIVEV; LIVEV[size(MA)] = 0;
+int npt = 0;
+for (i = 1; i <= size(MA); i++) {
+  MA[i] = std(MA[i]);
+  if (reduce(det0, MA[i]) == 0) { LIVEV[i] = 0; "COMPONENT", i, "DEAD"; }
+  else { LIVEV[i] = 1; "COMPONENT", i, "LIVE ngens", size(MA[i]); }
+  hit = 1;
+  for (j = 1; j <= size(MA[i]); j++) {
+    poly ev = MA[i][j]; for (kk = 1; kk <= 10; kk++) { ev = subst(ev, var(kk), PT[kk]); }
+    if (ev != 0) { hit = 0; break; }
+  }
+  if (hit == 1) { npt++; "ALPOGE POINT IN COMPONENT", i, "LIVE =", LIVEV[i]; }
+}
+if (npt == 0) { "CONTROL FAIL: point in no component"; }
+ring rf = 0, (q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, x, y, z, X, Y, Z, t, s), dp;
+ideal KEf = imap(rq, KE); poly det0f = imap(rq, det0);
+ideal COLL = X^3*Y + 3*X^2*Z - 2*X - x^3*y - 3*x^2*z + 2*x,-X^4*Y^3*q16 - X^3*Y^2*Z*q15 - X^3*Y*Z^3*q14 - X^2*Y^2*q13 - X^2*Y*Z^2*q12 - X^2*Z^4*q11 - X*Y*Z*q10 - X*Z^3*q9 - Y*q8 - Z^2*q7 + q10*x*y*z + q11*x^2*z^4 + q12*x^2*y*z^2 + q13*x^2*y^2 + q14*x^3*y*z^3 + q15*x^3*y^2*z + q16*x^4*y^3 + q7*z^2 + q8*y + q9*x*z^3,-3*X^3*Y*Z^2 - 6*X^2*Y*Z - 9*X^2*Z^3 - 3*X*Y - 12*X*Z^2 - Z + 3*x^3*y*z^2 + 6*x^2*y*z + 9*x^2*z^3 + 3*x*y + 12*x*z^2 + z;
+list MAf = imap(rq, MA);
+ideal diffs = x-X, y-Y, z-Z;
+for (i = 1; i <= size(MAf); i++) {
+  if (LIVEV[i] == 1) {
+    for (kk = 1; kk <= 3; kk++) {
+      ideal I = KEf, MAf[i], COLL, t*diffs[kk]-1, s*det0f-1;
+      ideal G = groebner(I);
+      if (reduce(1, G) != 0) { bad = 1; "NONUNIT comp", i, "k", kk; }
+      else { "UNIT comp", i, "k", kk; }
+      kill I; kill G;
+    }
+  }
+}
+if (bad == 1) { "CONTROL PASS: NONUNIT component found (as it must be)"; }
+else { "CONTROL: no NONUNIT seen -- if all components ran UNIT this is a FAILURE of the pipeline"; }
+exit;

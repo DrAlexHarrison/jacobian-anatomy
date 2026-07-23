@@ -1,0 +1,78 @@
+// zero-weight rigidity certificates, system 737: w=[0, 3, -1] (b=3, c=1), u = y^1 z^3
+ring rq = 0, (q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, s, t), dp;
+ideal KE = 6*q17*q25*q9,6*q16*q25*q9 + 6*q17*q24*q9 + 5*q17*q25*q8,6*q15*q25*q9 + 6*q16*q24*q9 + 5*q16*q25*q8 + 6*q17*q23*q9 + 5*q17*q24*q8 + 4*q17*q25*q7,6*q14*q25*q9 + 6*q15*q24*q9 + 5*q15*q25*q8 + 6*q16*q23*q9 + 5*q16*q24*q8 + 4*q16*q25*q7 + 6*q17*q22*q9 + 5*q17*q23*q8 + 4*q17*q24*q7 + 3*q17*q25*q6,12*q13*q25*q9 + 24*q17*q21*q9 - 18*q17*q25*q5,6*q12*q25*q9 + 6*q14*q24*q9 + 5*q14*q25*q8 + 6*q15*q23*q9 + 5*q15*q24*q8 + 4*q15*q25*q7 + 6*q16*q22*q9 + 5*q16*q23*q8 + 4*q16*q24*q7 + 3*q16*q25*q6 + 6*q17*q20*q9 + 5*q17*q22*q8 + 4*q17*q23*q7 + 3*q17*q24*q6 + 2*q17*q25*q4,12*q11*q25*q9 + 12*q13*q24*q9 + 10*q13*q25*q8 + 24*q16*q21*q9 - 17*q16*q25*q5 + 24*q17*q19*q9 + 20*q17*q21*q8 - 15*q17*q24*q5 - 19*q17*q25*q3,6*q10*q25*q9 + 6*q12*q24*q9 + 5*q12*q25*q8 + 6*q14*q23*q9 + 5*q14*q24*q8 + 4*q14*q25*q7 + 6*q15*q22*q9 + 5*q15*q23*q8 + 4*q15*q24*q7 + 3*q15*q25*q6 + 6*q16*q20*q9 + 5*q16*q22*q8 + 4*q16*q23*q7 + 3*q16*q24*q6 + 2*q16*q25*q4 + 6*q17*q18*q9 + q17*q2*q25 + 5*q17*q20*q8 + 4*q17*q22*q7 + 3*q17*q23*q6 + 2*q17*q24*q4,-20*q1*q17*q25 + 12*q11*q24*q9 + 10*q11*q25*q8 + 12*q13*q23*q9 + 10*q13*q24*q8 + 8*q13*q25*q7 + 24*q15*q21*q9 - 16*q15*q25*q5 + 24*q16*q19*q9 + 20*q16*q21*q8 - 14*q16*q24*q5 - 18*q16*q25*q3 + 20*q17*q19*q8 + 16*q17*q21*q7 - 12*q17*q23*q5 - 16*q17*q24*q3,6*q10*q24*q9 + 5*q10*q25*q8 + 6*q12*q23*q9 + 5*q12*q24*q8 + 4*q12*q25*q7 + 6*q14*q22*q9 + 5*q14*q23*q8 + 4*q14*q24*q7 + 3*q14*q25*q6 + 6*q15*q20*q9 + 5*q15*q22*q8 + 4*q15*q23*q7 + 3*q15*q24*q6 + 2*q15*q25*q4 + 6*q16*q18*q9 + q16*q2*q25 + 5*q16*q20*q8 + 4*q16*q22*q7 + 3*q16*q23*q6 + 2*q16*q24*q4 + 5*q17*q18*q8 + q17*q2*q24 + 4*q17*q20*q7 + 3*q17*q22*q6 + 2*q17*q23*q4,-19*q1*q16*q25 - 17*q1*q17*q24 + 12*q11*q23*q9 + 10*q11*q24*q8 + 8*q11*q25*q7 + 12*q13*q22*q9 + 10*q13*q23*q8 + 8*q13*q24*q7 + 6*q13*q25*q6 + 24*q14*q21*q9 - 15*q14*q25*q5 + 24*q15*q19*q9 + 20*q15*q21*q8 - 13*q15*q24*q5 - 17*q15*q25*q3 + 20*q16*q19*q8 + 16*q16*q21*q7 - 11*q16*q23*q5 - 15*q16*q24*q3 + 16*q17*q19*q7 + 12*q17*q21*q6 - 9*q17*q22*q5 - 13*q17*q23*q3,6*q10*q23*q9 + 5*q10*q24*q8 + 4*q10*q25*q7 + 6*q12*q22*q9 + 5*q12*q23*q8 + 4*q12*q24*q7 + 3*q12*q25*q6 + 6*q14*q20*q9 + 5*q14*q22*q8 + 4*q14*q23*q7 + 3*q14*q24*q6 + 2*q14*q25*q4 + 6*q15*q18*q9 + q15*q2*q25 + 5*q15*q20*q8 + 4*q15*q22*q7 + 3*q15*q23*q6 + 2*q15*q24*q4 + 5*q16*q18*q8 + q16*q2*q24 + 4*q16*q20*q7 + 3*q16*q22*q6 + 2*q16*q23*q4 + 4*q17*q18*q7 + q17*q2*q23 + 3*q17*q20*q6 + 2*q17*q22*q4,30*q13*q21*q9 - 12*q13*q25*q5,-18*q1*q15*q25 - 16*q1*q16*q24 - 14*q1*q17*q23 + 12*q11*q22*q9 + 10*q11*q23*q8 + 8*q11*q24*q7 + 6*q11*q25*q6 + 24*q12*q21*q9 - 14*q12*q25*q5 + 12*q13*q20*q9 + 10*q13*q22*q8 + 8*q13*q23*q7 + 6*q13*q24*q6 + 4*q13*q25*q4 + 24*q14*q19*q9 + 20*q14*q21*q8 - 12*q14*q24*q5 - 16*q14*q25*q3 + 20*q15*q19*q8 + 16*q15*q21*q7 - 10*q15*q23*q5 - 14*q15*q24*q3 + 16*q16*q19*q7 + 12*q16*q21*q6 - 8*q16*q22*q5 - 12*q16*q23*q3 + 12*q17*q19*q6 - 6*q17*q20*q5 + 8*q17*q21*q4 - 10*q17*q22*q3,6*q10*q22*q9 + 5*q10*q23*q8 + 4*q10*q24*q7 + 3*q10*q25*q6 + 6*q12*q20*q9 + 5*q12*q22*q8 + 4*q12*q23*q7 + 3*q12*q24*q6 + 2*q12*q25*q4 + 6*q14*q18*q9 + q14*q2*q25 + 5*q14*q20*q8 + 4*q14*q22*q7 + 3*q14*q23*q6 + 2*q14*q24*q4 + 5*q15*q18*q8 + q15*q2*q24 + 4*q15*q20*q7 + 3*q15*q22*q6 + 2*q15*q23*q4 + 4*q16*q18*q7 + q16*q2*q23 + 3*q16*q20*q6 + 2*q16*q22*q4 + 3*q17*q18*q6 + q17*q2*q22 + 2*q17*q20*q4,30*q11*q21*q9 - 11*q11*q25*q5 + 30*q13*q19*q9 + 25*q13*q21*q8 - 9*q13*q24*q5 - 14*q13*q25*q3 + q16*q21*q5 + 3*q17*q19*q5 - 4*q17*q21*q3,-17*q1*q14*q25 - 15*q1*q15*q24 - 13*q1*q16*q23 - 11*q1*q17*q22 + 24*q10*q21*q9 - 13*q10*q25*q5 + 12*q11*q20*q9 + 10*q11*q22*q8 + 8*q11*q23*q7 + 6*q11*q24*q6 + 4*q11*q25*q4 + 24*q12*q19*q9 + 20*q12*q21*q8 - 11*q12*q24*q5 - 15*q12*q25*q3 + 12*q13*q18*q9 + 2*q13*q2*q25 + 10*q13*q20*q8 + 8*q13*q22*q7 + 6*q13*q23*q6 + 4*q13*q24*q4 + 20*q14*q19*q8 + 16*q14*q21*q7 - 9*q14*q23*q5 - 13*q14*q24*q3 + 16*q15*q19*q7 + 12*q15*q21*q6 - 7*q15*q22*q5 - 11*q15*q23*q3 + 12*q16*q19*q6 - 5*q16*q20*q5 + 8*q16*q21*q4 - 9*q16*q22*q3 - 3*q17*q18*q5 + 8*q17*q19*q4 + 4*q17*q2*q21 - 7*q17*q20*q3,6*q10*q20*q9 + 5*q10*q22*q8 + 4*q10*q23*q7 + 3*q10*q24*q6 + 2*q10*q25*q4 + 6*q12*q18*q9 + q12*q2*q25 + 5*q12*q20*q8 + 4*q12*q22*q7 + 3*q12*q23*q6 + 2*q12*q24*q4 + 5*q14*q18*q8 + q14*q2*q24 + 4*q14*q20*q7 + 3*q14*q22*q6 + 2*q14*q23*q4 + 4*q15*q18*q7 + q15*q2*q23 + 3*q15*q20*q6 + 2*q15*q22*q4 + 3*q16*q18*q6 + q16*q2*q22 + 2*q16*q20*q4 + 2*q17*q18*q4 + q17*q2*q20,-16*q1*q13*q25 - 8*q1*q17*q21 + 30*q11*q19*q9 + 25*q11*q21*q8 - 8*q11*q24*q5 - 13*q11*q25*q3 + 25*q13*q19*q8 + 20*q13*q21*q7 - 6*q13*q23*q5 - 11*q13*q24*q3 + 2*q15*q21*q5 + 4*q16*q19*q5 - 3*q16*q21*q3 - q17*q19*q3,-16*q1*q12*q25 - 14*q1*q14*q24 - 12*q1*q15*q23 - 10*q1*q16*q22 - 8*q1*q17*q20 + 24*q10*q19*q9 + 20*q10*q21*q8 - 10*q10*q24*q5 - 14*q10*q25*q3 + 12*q11*q18*q9 + 2*q11*q2*q25 + 10*q11*q20*q8 + 8*q11*q22*q7 + 6*q11*q23*q6 + 4*q11*q24*q4 + 20*q12*q19*q8 + 16*q12*q21*q7 - 8*q12*q23*q5 - 12*q12*q24*q3 + 10*q13*q18*q8 + 2*q13*q2*q24 + 8*q13*q20*q7 + 6*q13*q22*q6 + 4*q13*q23*q4 + 16*q14*q19*q7 + 12*q14*q21*q6 - 6*q14*q22*q5 - 10*q14*q23*q3 + 12*q15*q19*q6 - 4*q15*q20*q5 + 8*q15*q21*q4 - 8*q15*q22*q3 - 2*q16*q18*q5 + 8*q16*q19*q4 + 4*q16*q2*q21 - 6*q16*q20*q3 - 4*q17*q18*q3 + 4*q17*q19*q2,6*q10*q18*q9 + q10*q2*q25 + 5*q10*q20*q8 + 4*q10*q22*q7 + 3*q10*q23*q6 + 2*q10*q24*q4 + 5*q12*q18*q8 + q12*q2*q24 + 4*q12*q20*q7 + 3*q12*q22*q6 + 2*q12*q23*q4 + 4*q14*q18*q7 + q14*q2*q23 + 3*q14*q20*q6 + 2*q14*q22*q4 + 3*q15*q18*q6 + q15*q2*q22 + 2*q15*q20*q4 + 2*q16*q18*q4 + q16*q2*q20 + q17*q18*q2,-15*q1*q11*q25 - 13*q1*q13*q24 - 7*q1*q16*q21 - 5*q1*q17*q19 + 25*q11*q19*q8 + 20*q11*q21*q7 - 5*q11*q23*q5 - 10*q11*q24*q3 + 20*q13*q19*q7 + 15*q13*q21*q6 - 3*q13*q22*q5 - 8*q13*q23*q3 + 3*q14*q21*q5 + 5*q15*q19*q5 - 2*q15*q21*q3,-15*q1*q10*q25 - 13*q1*q12*q24 - 11*q1*q14*q23 - 9*q1*q15*q22 - 7*q1*q16*q20 - 5*q1*q17*q18 + 20*q10*q19*q8 + 16*q10*q21*q7 - 7*q10*q23*q5 - 11*q10*q24*q3 + 10*q11*q18*q8 + 2*q11*q2*q24 + 8*q11*q20*q7 + 6*q11*q22*q6 + 4*q11*q23*q4 + 16*q12*q19*q7 + 12*q12*q21*q6 - 5*q12*q22*q5 - 9*q12*q23*q3 + 8*q13*q18*q7 + 2*q13*q2*q23 + 6*q13*q20*q6 + 4*q13*q22*q4 + 12*q14*q19*q6 - 3*q14*q20*q5 + 8*q14*q21*q4 - 7*q14*q22*q3 - q15*q18*q5 + 8*q15*q19*q4 + 4*q15*q2*q21 - 5*q15*q20*q3 - 3*q16*q18*q3 + 4*q16*q19*q2,5*q10*q18*q8 + q10*q2*q24 + 4*q10*q20*q7 + 3*q10*q22*q6 + 2*q10*q23*q4 + 4*q12*q18*q7 + q12*q2*q23 + 3*q12*q20*q6 + 2*q12*q22*q4 + 3*q14*q18*q6 + q14*q2*q22 + 2*q14*q20*q4 + 2*q15*q18*q4 + q15*q2*q20 + q16*q18*q2,6*q13*q21*q5,-12*q1*q11*q24 - 10*q1*q13*q23 - 6*q1*q15*q21 - 4*q1*q16*q19 + 20*q11*q19*q7 + 15*q11*q21*q6 - 2*q11*q22*q5 - 7*q11*q23*q3 + 4*q12*q21*q5 + 15*q13*q19*q6 + 10*q13*q21*q4 - 5*q13*q22*q3 + 6*q14*q19*q5 - q14*q21*q3 + q15*q19*q3,-12*q1*q10*q24 - 10*q1*q12*q23 - 8*q1*q14*q22 - 6*q1*q15*q20 - 4*q1*q16*q18 + 16*q10*q19*q7 + 12*q10*q21*q6 - 4*q10*q22*q5 - 8*q10*q23*q3 + 8*q11*q18*q7 + 2*q11*q2*q23 + 6*q11*q20*q6 + 4*q11*q22*q4 + 12*q12*q19*q6 - 2*q12*q20*q5 + 8*q12*q21*q4 - 6*q12*q22*q3 + 6*q13*q18*q6 + 2*q13*q2*q22 + 4*q13*q20*q4 + 8*q14*q19*q4 + 4*q14*q2*q21 - 4*q14*q20*q3 - 2*q15*q18*q3 + 4*q15*q19*q2,4*q10*q18*q7 + q10*q2*q23 + 3*q10*q20*q6 + 2*q10*q22*q4 + 3*q12*q18*q6 + q12*q2*q22 + 2*q12*q20*q4 + 2*q14*q18*q4 + q14*q2*q20 + q15*q18*q2,7*q11*q21*q5 + 9*q13*q19*q5 + q13*q21*q3,-9*q1*q11*q23 - 7*q1*q13*q22 - 5*q1*q14*q21 - 3*q1*q15*q19 + 5*q10*q21*q5 + 15*q11*q19*q6 + q11*q20*q5 + 10*q11*q21*q4 - 4*q11*q22*q3 + 7*q12*q19*q5 + 3*q13*q18*q5 + 10*q13*q19*q4 + 5*q13*q2*q21 - 2*q13*q20*q3 + 2*q14*q19*q3,-9*q1*q10*q23 - 7*q1*q12*q22 - 5*q1*q14*q20 - 3*q1*q15*q18 + 12*q10*q19*q6 - q10*q20*q5 + 8*q10*q21*q4 - 5*q10*q22*q3 + 6*q11*q18*q6 + 2*q11*q2*q22 + 4*q11*q20*q4 + q12*q18*q5 + 8*q12*q19*q4 + 4*q12*q2*q21 - 3*q12*q20*q3 + 4*q13*q18*q4 + 2*q13*q2*q20 - q14*q18*q3 + 4*q14*q19*q2,3*q10*q18*q6 + q10*q2*q22 + 2*q10*q20*q4 + 2*q12*q18*q4 + q12*q2*q20 + q14*q18*q2,-4*q1*q13*q21 + 10*q11*q19*q5 + 2*q11*q21*q3 + 4*q13*q19*q3,-6*q1*q11*q22 - 4*q1*q12*q21 - 4*q1*q13*q20 - 2*q1*q14*q19 + 8*q10*q19*q5 + q10*q21*q3 + 4*q11*q18*q5 + 10*q11*q19*q4 + 5*q11*q2*q21 - q11*q20*q3 + 3*q12*q19*q3 + q13*q18*q3 + 5*q13*q19*q2,-6*q1*q10*q22 - 4*q1*q12*q20 - 2*q1*q14*q18 + 2*q10*q18*q5 + 8*q10*q19*q4 + 4*q10*q2*q21 - 2*q10*q20*q3 + 4*q11*q18*q4 + 2*q11*q2*q20 + 4*q12*q19*q2 + 2*q13*q18*q2,2*q10*q18*q4 + q10*q2*q20 + q12*q18*q2,-3*q1*q11*q21 - q1*q13*q19 + 5*q11*q19*q3,-3*q1*q10*q21 - 3*q1*q11*q20 - q1*q12*q19 - q1*q13*q18 + 4*q10*q19*q3 + 2*q11*q18*q3 + 5*q11*q19*q2,-3*q1*q10*q20 - q1*q12*q18 + q10*q18*q3 + 4*q10*q19*q2 + 2*q11*q18*q2;
+poly det0 = q10*q18*q2;
+int bad = 0;
+ideal I11 = KE, s*det0-1, t*q11-1;
+ideal G11 = groebner(I11);
+if (reduce(1, G11) != 0) { bad = 1; "NONUNIT-INFO q11 comp 1 alpha (0, 2, 3)"; }
+else { "UNIT q11 INFO"; }
+kill I11; kill G11;
+ideal I12 = KE, s*det0-1, t*q12-1;
+ideal G12 = groebner(I12);
+if (reduce(1, G12) != 0) { bad = 1; "NONUNIT-INFO q12 comp 1 alpha (1, 1, 0)"; }
+else { "UNIT q12 INFO"; }
+kill I12; kill G12;
+ideal I13 = KE, s*det0-1, t*q13-1;
+ideal G13 = groebner(I13);
+if (reduce(1, G13) != 0) { bad = 1; "NONUNIT-INFO q13 comp 1 alpha (1, 2, 3)"; }
+else { "UNIT q13 INFO"; }
+kill I13; kill G13;
+ideal I14 = KE, s*det0-1, t*q14-1;
+ideal G14 = groebner(I14);
+if (reduce(1, G14) != 0) { bad = 1; "NONUNIT-INFO q14 comp 1 alpha (2, 1, 0)"; }
+else { "UNIT q14 INFO"; }
+kill I14; kill G14;
+ideal I15 = KE, s*det0-1, t*q15-1;
+ideal G15 = groebner(I15);
+if (reduce(1, G15) != 0) { bad = 1; "NONUNIT-INFO q15 comp 1 alpha (3, 1, 0)"; }
+else { "UNIT q15 INFO"; }
+kill I15; kill G15;
+ideal I16 = KE, s*det0-1, t*q16-1;
+ideal G16 = groebner(I16);
+if (reduce(1, G16) != 0) { bad = 1; "NONUNIT-INFO q16 comp 1 alpha (4, 1, 0)"; }
+else { "UNIT q16 INFO"; }
+kill I16; kill G16;
+ideal I17 = KE, s*det0-1, t*q17-1;
+ideal G17 = groebner(I17);
+if (reduce(1, G17) != 0) { bad = 1; "NONUNIT-INFO q17 comp 1 alpha (5, 1, 0)"; }
+else { "UNIT q17 INFO"; }
+kill I17; kill G17;
+ideal I19 = KE, s*det0-1, t*q19-1;
+ideal G19 = groebner(I19);
+if (reduce(1, G19) != 0) { bad = 1; "NONUNIT-DECISIVE q19 comp 2 alpha (0, 1, 4)"; }
+else { "UNIT q19 DECISIVE"; }
+kill I19; kill G19;
+ideal I20 = KE, s*det0-1, t*q20-1;
+ideal G20 = groebner(I20);
+if (reduce(1, G20) != 0) { bad = 1; "NONUNIT-DECISIVE q20 comp 2 alpha (1, 0, 1)"; }
+else { "UNIT q20 DECISIVE"; }
+kill I20; kill G20;
+ideal I21 = KE, s*det0-1, t*q21-1;
+ideal G21 = groebner(I21);
+if (reduce(1, G21) != 0) { bad = 1; "NONUNIT-DECISIVE q21 comp 2 alpha (1, 1, 4)"; }
+else { "UNIT q21 DECISIVE"; }
+kill I21; kill G21;
+ideal I22 = KE, s*det0-1, t*q22-1;
+ideal G22 = groebner(I22);
+if (reduce(1, G22) != 0) { bad = 1; "NONUNIT-DECISIVE q22 comp 2 alpha (2, 0, 1)"; }
+else { "UNIT q22 DECISIVE"; }
+kill I22; kill G22;
+ideal I23 = KE, s*det0-1, t*q23-1;
+ideal G23 = groebner(I23);
+if (reduce(1, G23) != 0) { bad = 1; "NONUNIT-DECISIVE q23 comp 2 alpha (3, 0, 1)"; }
+else { "UNIT q23 DECISIVE"; }
+kill I23; kill G23;
+ideal I24 = KE, s*det0-1, t*q24-1;
+ideal G24 = groebner(I24);
+if (reduce(1, G24) != 0) { bad = 1; "NONUNIT-DECISIVE q24 comp 2 alpha (4, 0, 1)"; }
+else { "UNIT q24 DECISIVE"; }
+kill I24; kill G24;
+ideal I25 = KE, s*det0-1, t*q25-1;
+ideal G25 = groebner(I25);
+if (reduce(1, G25) != 0) { bad = 1; "NONUNIT-DECISIVE q25 comp 2 alpha (5, 0, 1)"; }
+else { "UNIT q25 DECISIVE"; }
+kill I25; kill G25;
+if (bad == 0) { "VERDICT-ZWRIGID system 737: RIGID (Q,R constant forced) => EMPTY by hand endgame"; }
+else { "VERDICT-ZWRIGID system 737: NOT RIGID -- check DECISIVE flags; DECISIVE nonunit = NONEMPTY SIREN"; }
+exit;
