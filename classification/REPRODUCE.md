@@ -2,6 +2,10 @@
 
 Requirements: Singular 4.x, Python 3 with sympy. Optional: msolve.
 
+No Singular installed? `python3 check.py` re-proves a sample of the
+certificates in sympy's own Groebner engine and recomputes the class
+fold, with no dependency beyond sympy.
+
 ## Any single certificate
     Singular -q < jobs/f0001.sing
 Compare with results/f0001.out; a job prints its verdict line when all

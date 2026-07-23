@@ -12,6 +12,7 @@ its degree is minimal within its symmetry class.
   in its symmetry class. 371 isomorphism classes; 741 rerunnable
   certificate jobs; four hand theorems with full proofs; negative
   controls. Scope and qualifiers: `classification/CLASSIFICATION.md`.
+  Quick independent check with sympy alone: `python3 classification/check.py`.
 - `verify.sh`: reproduces every computational claim in NOTE.md
   (needs python3 + sympy).
 - `JC.lean`: Lean 4 / mathlib certificate (det ≡ −2 and non-injectivity
