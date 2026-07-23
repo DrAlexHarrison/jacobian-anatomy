@@ -33,18 +33,18 @@ Every step below is of the form  new = A ∘ (old × id_k) ∘ B  with A, B
 explicit (affine-)elementary automorphisms of Jacobian determinant 1.
 Hence, structurally:
 
-* det J(new) = det J(old)  (as polynomials — chain rule);
+* det J(new) = det J(old)  (as polynomials, chain rule);
 * old(p) = old(q)  ⟹  new(B⁻¹(p,w)) = A(old(p),w) = new(B⁻¹(q,w)),
   so collisions transport explicitly (we always take w = 0).
 
-### Stage 1 — linear normalization (dimension 3)
+### Stage 1: linear normalization (dimension 3)
 
 L₀ := JF(0) = [[0,0,1],[0,1,0],[2,0,0]], det L₀ = −2.
 F̃ := L₀⁻¹ ∘ F = X + H,  H of order ≥ 2, degree 7, **det J F̃ ≡ 1**
 (3×3, verified symbolically). Collisions: same three points, common image
 now (0, 0, −1/4).
 
-### Stage 2 — BCW Prop. (3.1): degree reduction to ≤ 3 (dim 3 → 39)
+### Stage 2, BCW Prop. (3.1): degree reduction to ≤ 3 (dim 3 → 39)
 
 While some component F_i contains a monomial aM of degree d ≥ 4: write
 aM = P·Q with 2 ≤ deg P, deg Q ≤ d−2 (we use the cost-optimal split
@@ -77,7 +77,7 @@ cancels exactly), Laplace deletes them, and after 18 replays the 3×3
 det J F̃ = 1 finishes the proof. Column operations preserve determinants
 exactly, so this is a complete symbolic proof, executed in sympy.
 
-### Stage 3 — BCW §4 "doubling" (dim 39 → 78)
+### Stage 3: BCW §4 "doubling" (dim 39 → 78)
 
 Split H = H₂ + H₃ (quadratic/cubic parts) and set, on C^{2·39},
 
@@ -86,12 +86,12 @@ Split H = H₂ + H₃ (quadratic/cubic parts) and set, on C^{2·39},
 
 This is the step that makes J(N) **nilpotent** (N = F′ − id): BCW run it
 with a parameter T and conclude nilpotency from invertibility of
-I + T·J(N) via their graded-ring Lemma (4.1). We do not assume this — we
+I + T·J(N) via their graded-ring Lemma (4.1). We do not assume this; we
 prove the consequences symbolically in Stage 5.
 
 Collision transport: p ↦ (p, H₃(p)); common image ↦ (image, 0).
 
-### Stage 4 — BCW §4 homogenization (dim 78 → 79)
+### Stage 4: BCW §4 homogenization (dim 78 → 79)
 
 Adjoin T as an honest coordinate:
 
@@ -142,10 +142,10 @@ v1..v39, w1..w39, t; also in `G_map.txt` / `collisions.txt`):
 
 Common image: G(P) = G(Q) = G(R) = (0, 0, −1/4, 0×75, 1).
 
-## 3. Stage B — Drużkowski cubic-linear form (via Gorni–Zampieri pairing)
+## 3. Stage B: Drużkowski cubic-linear form (via Gorni–Zampieri pairing)
 
 Construction (Gorni & Zampieri, *On cubic-linear polynomial mappings*,
-Prop. 2.1, specialized — our A needs **no matrix inversion**):
+Prop. 2.1, specialized, our A needs **no matrix inversion**):
 
 1. **Waring step.** Using a·b² = ((a+b)³ + (a−b)³ − 2a³)/6 and
    a·b·c = ((a+b+c)³ + (a−b−c)³ − (a+b−c)³ − (a−b+c)³)/24, write the
@@ -154,15 +154,15 @@ Prop. 2.1, specialized — our A needs **no matrix inversion**):
    to sign) in the 79 variables and B₀ is the 79 × 347 coefficient
    matrix (411 nonzero entries). **Verified symbolically, component by
    component.** rank D₀ = 79 (asserted via Gram determinant).
-2. **Padding** (GZ Prop 2.1; needed because B₀ has zero rows — the
+2. **Padding** (GZ Prop 2.1; needed because B₀ has zero rows, the
    t-component and every w-partner of a purely quadratic gadget
    component have H₃ = 0):
 
        B := [B₀ | I₇₉],   D := [D₀ ; 0],   C := [0 ; I₇₉],
        N := r₀ + 79 = 426,   BC = I₇₉.
 
-3. **The map.** A := D·B = [[D₀B₀, D₀],[0, 0]] — explicit, **no matrix
-   inversion anywhere** — and, writing X = (p, q) ∈ C³⁴⁷ × C⁷⁹,
+3. **The map.** A := D·B = [[D₀B₀, D₀],[0, 0]] (explicit, **no matrix
+   inversion anywhere**) and, writing X = (p, q) ∈ C³⁴⁷ × C⁷⁹,
 
        F(X) = X − (A X)^{*3}   on C⁴²⁶,
        F(p, q) = ( p − (D₀(B₀p + q))^{*3},  q ).
@@ -176,7 +176,7 @@ Prop. 2.1, specialized — our A needs **no matrix inversion**):
 4. **Keller.** J_F = I − 3·diag((AX)^{*2})·D·B. Sylvester's identity
    det(I − UV) = det(I − VU) with U = 3·diag((DBX)^{*2})·D, V = B
    gives det J_F(X) = det(I₇₉ − 3·B₀·diag((D₀y)^{*2})·D₀) at y = BX,
-   which is det JG(BX) ≡ 1 — riding on the Stage-A symbolic proof.
+   which is det JG(BX) ≡ 1, riding on the Stage-A symbolic proof.
    The same chain with a fresh s gives det(I + s·J_{H_F}) ≡ 1, so
    J_{H_F} is nilpotent. (Sylvester's identity is the one cited, not
    machine-derived, ingredient; float spot-checks of det J_F at random
@@ -187,9 +187,9 @@ Prop. 2.1, specialized — our A needs **no matrix inversion**):
        X₁  = C·x₁ = (0, x₁),
        X₂′ = C·x₂ + F(C·x₁) − F(C·x₂) = ( (D₀x₂)^{*3} − (D₀x₁)^{*3},  x₁ ),
 
-   then F(X₂′) = F(X₁) = (−(D₀x₁)^{*3}, x₁) — the key cancellation is
+   then F(X₂′) = F(X₁) = (−(D₀x₁)^{*3}, x₁), the key cancellation is
    B₀[(D₀x₂)^{*3} − (D₀x₁)^{*3}] = x₂ − x₁, which is exactly
-   G(x₁) = G(x₂) — and B·X₁ = x₁ ≠ x₂ = B·X₂′ certifies X₁ ≠ X₂′.
+   G(x₁) = G(x₂), and B·X₁ = x₁ ≠ x₂ = B·X₂′ certifies X₁ ≠ X₂′.
    All three Stage-A points lift; the three lifted points and their
    common image are **verified exactly** by direct rational evaluation
    of F on C⁴²⁶.
@@ -225,19 +225,19 @@ would cut several of the 36 gadget coordinates; (b) BCW's "linear in
 each variable" refinement is skipped (not needed for cubic-homogeneous
 form); (c) partial doubling (only components with quadratic part
 strictly need partners) could shrink the 39 doubling coordinates;
-(d) the Waring step uses per-monomial decompositions — a global change
+(d) the Waring step uses per-monomial decompositions: a global change
 of coordinates would reduce r₀ = 347; (e) the 79 padding coordinates
-exist only to give B a right inverse — padding only the zero rows of B₀
+exist only to give B a right inverse: padding only the zero rows of B₀
 would shrink that block. Anyone racing for a *smaller* N can start from
 `construct_verify.py` and tighten these; the maps here are the first
 fully verified ones, not the smallest.
 
 ## Files
 
-* `construct_verify.py` — rebuilds everything from scratch; asserts all
+* `construct_verify.py`: rebuilds everything from scratch; asserts all
   of the above; green under `/usr/bin/python3`.
-* `G_map.txt` — the full 79 components of G and the three colliding
+* `G_map.txt`: the full 79 components of G and the three colliding
   points with common image.
-* `collisions.txt` — the Stage-A collision data, one coordinate per line.
-* `F_druzkowski.txt` — D₀, B₀ (sparse), and the three colliding points
+* `collisions.txt`: the Stage-A collision data, one coordinate per line.
+* `F_druzkowski.txt`: D₀, B₀ (sparse), and the three colliding points
   of the cubic-linear F with common image.

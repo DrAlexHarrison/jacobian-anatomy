@@ -17,10 +17,10 @@ Local clone: `/home/alex/code/jc/audit/jacobian`
 66b4ec86 init                  AuthorDate/CommitDate: Mon Jul 20 00:28:38 2026 -0400
 ```
 
-  In UTC: init 04:28:38Z, all-characteristics 05:00:17Z, readme 05:06:19Z — all in a 38-minute window early 2026-07-20, i.e., hours after Alpöge's 2026-07-19 announcement.
-- File inventory (complete): `Jacobian/Counterexample.lean` (162 lines — the entire mathematical content), `Jacobian.lean` (one-line root import), `lakefile.toml`, `lake-manifest.json`, `lean-toolchain`, `README.md`, `.gitignore` (`/.lake`). No CI workflow, no other Lean files.
+  In UTC: init 04:28:38Z, all-characteristics 05:00:17Z, readme 05:06:19Z, all in a 38-minute window early 2026-07-20, i.e., hours after Alpöge's 2026-07-19 announcement.
+- File inventory (complete): `Jacobian/Counterexample.lean` (162 lines, the entire mathematical content), `Jacobian.lean` (one-line root import), `lakefile.toml`, `lake-manifest.json`, `lean-toolchain`, `README.md`, `.gitignore` (`/.lake`). No CI workflow, no other Lean files.
 - Toolchain: `leanprover/lean4:v4.33.0-rc1`. Mathlib pin: tag `v4.33.0-rc1`, rev `79d0395a1825a6264ad5d269e35e60537518955e` (differs from our local mathlib pin `c732b96d05ef`, so their cache was fetched fresh via `lake exe cache get`).
-- README title credits "Levent Alpöge/Fable 5's counterexample" — the author publicly attributes the formalization assistance to a Claude Fable 5 model.
+- README title credits "Levent Alpöge/Fable 5's counterexample": the author publicly attributes the formalization assistance to a Claude Fable 5 model.
 
 ## 2. Build result: SUCCESS
 
@@ -47,7 +47,7 @@ Build completed successfully (8661 jobs).
 === build exit: 0 at 2026-07-20T08:18:27Z ===
 ```
 
-**`lake build` exits 0. Build completed successfully (8661 jobs).** The single warning is a mathlib style linter complaining the file lacks a copyright header — purely cosmetic, zero mathematical content. `Jacobian.Counterexample` itself elaborated in 13s.
+**`lake build` exits 0. Build completed successfully (8661 jobs).** The single warning is a mathlib style linter complaining the file lacks a copyright header: purely cosmetic, zero mathematical content. `Jacobian.Counterexample` itself elaborated in 13s.
 
 ## 3. Sorry/axiom sweep
 
@@ -90,7 +90,7 @@ not_jacobianConjecture_complex : ¬∀ (F : Fin 3 → MvPolynomial (Fin 3) ℂ),
 'not_jacobianConjecture_complex' depends on axioms: [propext, Classical.choice, Quot.sound]
 ```
 
-Every definition, lemma, and headline theorem reports exactly `[propext, Classical.choice, Quot.sound]` — the three standard axioms of classical mathlib. No `sorryAx`, no `Lean.ofReduceBool`/`ofReduceNat` (i.e., no `native_decide`), no custom axioms anywhere in the dependency cone. The elaborated `#check` statements also confirm the theorems say exactly what the source reads — no hidden hypotheses beyond `[Field K]` (plus `2 ≠ 0` only on the det=−2 variant, as intended).
+Every definition, lemma, and headline theorem reports exactly `[propext, Classical.choice, Quot.sound]`, the three standard axioms of classical mathlib. No `sorryAx`, no `Lean.ofReduceBool`/`ofReduceNat` (i.e., no `native_decide`), no custom axioms anywhere in the dependency cone. The elaborated `#check` statements also confirm the theorems say exactly what the source reads: no hidden hypotheses beyond `[Field K]` (plus `2 ≠ 0` only on the det=−2 variant, as intended).
 
 ## 5. Faithfulness audit
 
@@ -160,7 +160,7 @@ G(0,1,0) - G(1,1,0) = [-52, -60, -2] | all even: True   (char-2 collision)
 G mod 2 = [z, x*z + y, x**3*z + x**2*y + x]              (matches their comment)
 ```
 
-Although the conjugation uses 1/2, G itself has integer coefficients (2, 4, 3, 12), so it is well-defined over every field, including char 2; `jacobianDet_G = 1` is a polynomial identity over ℤ, hence holds in all characteristics (their `ring` closes it uniformly). In char 2 the collision is (0,1,0) vs (1,1,0) — genuinely distinct in every field (0 ≠ 1) — proved via `linear_combination` with coefficients (−26, −30, −1) on `(2 : K) = 0`, which matches the componentwise differences (−52, −60, −2) exactly.
+Although the conjugation uses 1/2, G itself has integer coefficients (2, 4, 3, 12), so it is well-defined over every field, including char 2; `jacobianDet_G = 1` is a polynomial identity over ℤ, hence holds in all characteristics (their `ring` closes it uniformly). In char 2 the collision is (0,1,0) vs (1,1,0), genuinely distinct in every field (0 ≠ 1), proved via `linear_combination` with coefficients (−26, −30, −1) on `(2 : K) = 0`, which matches the componentwise differences (−52, −60, −2) exactly.
 
 ### 5.4 Statement strength
 
@@ -175,11 +175,11 @@ theorem not_jacobianConjecture_complex :
     ¬ ∀ F : Fin 3 → MvPolynomial (Fin 3) ℂ, IsUnit (jacobianDet F) → Injective (evalMap F)
 ```
 
-- The only hypothesis on the headline theorem is `[Field K]` — no characteristic assumption, no decidability instances, no smuggled side conditions. The statement genuinely says: for EVERY field K there exists a polynomial self-map of K³ with unit Jacobian determinant that is not injective. That is the correct formal negation of the (dimension-3 instance of the) Jacobian Conjecture property over K; a dim-3 counterexample refutes the general conjecture.
-- `IsUnit (jacobianDet F)` lives in `MvPolynomial (Fin 3) K`, where units are the nonzero constants — the correct notion. For the det=−2 form the unit proof correctly requires 2 ≠ 0; the det=1 form uses `isUnit_one`.
+- The only hypothesis on the headline theorem is `[Field K]`: no characteristic assumption, no decidability instances, no smuggled side conditions. The statement genuinely says: for EVERY field K there exists a polynomial self-map of K³ with unit Jacobian determinant that is not injective. That is the correct formal negation of the (dimension-3 instance of the) Jacobian Conjecture property over K; a dim-3 counterexample refutes the general conjecture.
+- `IsUnit (jacobianDet F)` lives in `MvPolynomial (Fin 3) K`, where units are the nonzero constants, the correct notion. For the det=−2 form the unit proof correctly requires 2 ≠ 0; the det=1 form uses `isUnit_one`.
 - Caveat on mathematical (not formal) novelty: for char p > 0 the Jacobian Conjecture was already classically false (e.g., x − xᵖ in dimension 1), so the "all characteristics" breadth is not itself news; the mathematically new content is char 0 (and specifically ℂ), which the repo covers via `not_jacobianConjecture` and `not_jacobianConjecture_complex`. As a *formal statement*, though, all-char is genuinely proven and strictly broader.
 - Comparison with ours (`/home/alex/code/jc/JC.lean`): ours proves the det=−2 map non-injective over ℚ with the same genuine pderiv-matrix determinant. Theirs subsumes ours in stated generality (arbitrary field, char-2 handled via G, plus the ℂ specialization).
 
 ## 6. Conclusion: clean
 
-The repository at commit `0d4a921` is a sound, faithful, and complete Lean 4 formalization of Alpöge's counterexample to the Jacobian Conjecture, and it is stronger than a ℂ-only formalization. `lake build` on the pinned toolchain (Lean `v4.33.0-rc1`, mathlib `79d0395a`) completes successfully with zero errors (one cosmetic missing-copyright-header lint warning); the source contains no `sorry`, `admit`, `native_decide`, custom `axiom`, `unsafe`, `@[implemented_by]`, or `partial def`; and an independent `#print axioms` run over every definition, lemma, and headline theorem reports exactly `[propext, Classical.choice, Quot.sound]`. The map `F` is character-for-character Alpöge's announced map (sympy re-verified on this machine, including det J(F) = −2 from a genuine `pderiv`/`Matrix.det` encoding — nothing hardcoded, nothing rigged), the witnesses are Alpöge's exact points and genuinely distinct, and the det-1 form `G` is exactly diag(1/2,1/2,−1/2)∘F∘diag(1,2,2) with integer coefficients, det ≡ 1 in all characteristics, and a valid char-2 collision (0,1,0) ≠ (1,1,0) — making `not_jacobianConjecture_all_char (K) [Field K]` genuinely proven with no smuggled hypotheses. Our appropriate public posture: their repo is the first formalization and it is clean; ours (`/home/alex/code/jc/JC.lean`, over ℚ) is an independent second formalization, and this document is the build audit of theirs.
+The repository at commit `0d4a921` is a sound, faithful, and complete Lean 4 formalization of Alpöge's counterexample to the Jacobian Conjecture, and it is stronger than a ℂ-only formalization. `lake build` on the pinned toolchain (Lean `v4.33.0-rc1`, mathlib `79d0395a`) completes successfully with zero errors (one cosmetic missing-copyright-header lint warning); the source contains no `sorry`, `admit`, `native_decide`, custom `axiom`, `unsafe`, `@[implemented_by]`, or `partial def`; and an independent `#print axioms` run over every definition, lemma, and headline theorem reports exactly `[propext, Classical.choice, Quot.sound]`. The map `F` is character-for-character Alpöge's announced map (sympy re-verified on this machine, including det J(F) = −2 from a genuine `pderiv`/`Matrix.det` encoding, nothing hardcoded, nothing rigged), the witnesses are Alpöge's exact points and genuinely distinct, and the det-1 form `G` is exactly diag(1/2,1/2,−1/2)∘F∘diag(1,2,2) with integer coefficients, det ≡ 1 in all characteristics, and a valid char-2 collision (0,1,0) ≠ (1,1,0), making `not_jacobianConjecture_all_char (K) [Field K]` genuinely proven with no smuggled hypotheses. Our appropriate public posture: their repo is the first formalization and it is clean; ours (`/home/alex/code/jc/JC.lean`, over ℚ) is an independent second formalization, and this document is the build audit of theirs.

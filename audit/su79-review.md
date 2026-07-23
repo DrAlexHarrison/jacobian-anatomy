@@ -68,7 +68,7 @@ verified from the PRIMARY sources:
    (Weight bookkeeping at N = 79 checked: τ = (d−1)ω₁ = 2ω₁, kτ + µ with
    µ = θ = ω₁ + ω₇₈ gives (2k+1)ω₁ + ω₇₈; θ = highest root, valid for
    N ≥ 3. Focus point (c): CORRECT.)
-4. **The bridge (REPAIRED — see Finding B).** Steps 2-3 refute exactly the
+4. **The bridge (REPAIRED, see Finding B).** Steps 2-3 refute exactly the
    conclusion of Mathieu's Proposition 2.2(ii) [p. 268-269] for the graded
    G-algebra A' with f = Q_elt ∈ A'_1, τ = 2ω₁, µ = θ. Hence the conjecture
    C(A' ∗ A(2ω₁)) is FALSE for G = SL(79,C). By Corollaries 1.3 + 1.7
@@ -81,7 +81,7 @@ verified from the PRIMARY sources:
 5. **N ≥ 79.** Pad L to C^N, N > 79, by identity coordinates (H_i = 0 for
    i > 79): still cubic-homogeneous, Keller, non-injective (same P, Q, R
    padded by zeros). The whole chain reruns verbatim at N. (Currently
-   recorded NOWHERE in the artifacts — revision R5.)
+   recorded NOWHERE in the artifacts, revision R5.)
 
 I verified Mathieu's Prop 2.2(ii) proof line by line (p. 269): the
 Baire-category choice of ξ ∈ ∩_n U_n over the uncountable field C (each U_n
@@ -90,8 +90,8 @@ of submodules inject into ambient isotypic components), the Lemma 2.1
 surjection giving a FIXED detectable type ν for all n ≥ N, and the trivial
 component computation (L^n)_triv = [(f^n)_{nτ} ⊗ ξ^n]_triv. Sound. Cor 1.3's
 finitely-generated-subfield embedding into C and Lemma 1.2's ∫ = triv
-projection: sound. Focus point (b) — "non-polynomial inverse ⇒ infinitely
-many nonzero degrees" — is trivially correct once STATED as in step 1;
+projection: sound. Focus point (b), "non-polynomial inverse ⇒ infinitely
+many nonzero degrees", is trivially correct once STATED as in step 1;
 revision R4 fixes the garbled in-file justification.
 
 ## 2. FINDINGS (defects; none overturn the result)
@@ -100,9 +100,9 @@ revision R4 fixes the garbled in-file justification.
 script than the one on disk, and its negative control is vacuous.**
 The logged control (log lines 14-21) is a C^5 triangular automorphism whose
 inverse is nonzero at EVERY odd degree 3..15 through the scan ceiling, then
-declares "F^(d)==0 for all odd d>15 up to 15 — TERMINATES": an empty claim.
+declares "F^(d)==0 for all odd d>15 up to 15: TERMINATES": an empty claim.
 As logged, the control is indistinguishable from L. (A C^5 chain terminates
-at degree 3^4 = 81, far past the 15-ceiling — the control was miscalibrated.)
+at degree 3^4 = 81, far past the 15-ceiling, the control was miscalibrated.)
 The script on disk (mtime 03:37, newer than the log's 03:35) already contains
 a rewritten C^3 control that genuinely terminates at degree 9 inside the
 15-window, but no log of it existed. **Remediated during this review:**
@@ -112,7 +112,7 @@ CONTROL D adds a 79-variable in-dimension automorphism (terminates at
 degree 3) and CONTROL E checks the C^3 control against its closed-form
 inverse. Focus point (d): the ORIGINAL logged control did NOT exercise the
 failure mode; the remediated controls now do. Residual: script banner and
-docstring still say "C^5" for the C^3 control — R6.
+docstring still say "C^5" for the C^3 control, R6.
 
 **FINDING B (math, load-bearing citation): the certificate's cited bridge,
 Zwart Thm 4.16/4.23 [arXiv:2511.16561], has a genuine proof gap at the final
@@ -124,7 +124,7 @@ from vanishing of the µ-isotypic component of f^k ⊗ ξ^k, that
 is direct", refs/zwart.txt ~line 3310). That inference needs injectivity of
 w ↦ proj_µ(w ⊗ ξ^k) on the (µ+kτ)-isotypic component, which is FALSE in
 general: for SL(2), λ = ω, σ = ω, µ = 0, proj_triv(e₁ ⊗ e₁) = 0 with
-e₁ ≠ 0 — the kernel is exactly the highest-weight line. Mathieu's original
+e₁ ≠ 0; the kernel is exactly the highest-weight line. Mathieu's original
 proof avoids this precisely by choosing ξ generically (Baire over the
 uncountable field, his Prop 2.2 proof, p. 269); Zwart's fixed-ξ
 simplification is an unflagged deviation from Mathieu and does not close.
@@ -141,15 +141,15 @@ artifacts. Worse, PROGRAM.md §4 Step 2's construction sketch (f = the image
 of Q_elt under an embedding into C[SU(79)], g = a fixed matrix coefficient of
 type µ) is WRONG as written: the isotypic types occurring in Q_elt^k are
 (2k+i)ω₁ + iω₇₈, all k-dependent, so for ANY fixed g the pairing
-∫ f^k g dk vanishes for all large k automatically — the sketched untwisted
+∫ f^k g dk vanishes for all large k automatically; the sketched untwisted
 pair satisfies the MC conclusion vacuously and can never witness failure.
 The k-independent detectable type exists only after the Cartan twist
 L = f ⊗ ξ ∈ A' ∗ A(τ) with a Baire-generic ξ (Mathieu Prop 2.2), which
 PROGRAM.md §4 omits entirely and §5's obstruction table sidesteps ("the
-counterexample runs the contrapositive and bypasses it") — you cannot both
+counterexample runs the contrapositive and bypasses it"); you cannot both
 bypass the machinery and keep the word "explicit". Correct claim: MC(SU(79))
 is false, hence a violating K-finite pair EXISTS; an explicit pair would
-additionally require carrying the twist ξ (generic — any ξ outside countably
+additionally require carrying the twist ξ (generic, any ξ outside countably
 many proper closed sets works, so "explicit modulo one generic parameter" is
 achievable but is NEW WORK, not done). R2 de-escalates the claim; the
 "endgame deliverable" in PROGRAM.md §7 already points the right way.
@@ -159,7 +159,7 @@ achievable but is NEW WORK, not done). R2 de-escalates the claim; the
   Peter-Weyl dictionary; in the actual v2 text these are Lemmas 4.20, 4.21,
   4.22 + Thm 4.23. Citation drift throughout.
 - D2. Certificate docstring justifies "no polynomial inverse" by "(a
-  bijective Keller map is an automorphism)" — inverted logic; the correct
+  bijective Keller map is an automorphism)", inverted logic; the correct
   one-liner is §1 step 1. (R4)
 - D3. Certificate line "(Q_elt^k)_{2k·ω1} = 0 for all k <=> det J L = 1":
   only ⇐ is proven and only ⇐ is needed; drop "<=>".
@@ -167,7 +167,7 @@ achievable but is NEW WORK, not done). R2 de-escalates the claim; the
   C^N, the same N") as "Mathieu's theorem", contradicting its own §0.1
   drift-confirmation eight lines later. Align §0 with §0.1 (per-N content =
   homogeneous-form only). Same overshoot in §0 point 2 / §2 table: "SU(2)
-  governs planar JC₂" — via Mathieu's actual chain MC(SU(2)) delivers only
+  governs planar JC₂"; via Mathieu's actual chain MC(SU(2)) delivers only
   homogeneous-form JC₂, which is classically true, so SU(2) is not wired to
   open JC₂ content by this route at all.
 - D5. sweep/STATE references to the certificate as "explicit (f,g)" inherit
@@ -207,7 +207,7 @@ achievable but is NEW WORK, not done). R2 de-escalates the claim; the
 - (c) τ/τ+µ bookkeeping at N = 79: **CORRECT** (§1 step 3).
 - (d) negative control exercises true failure mode: **FAILED in the logged
   run** (Finding A); remediated (fresh rerun + controls D/E/F).
-- (e) independence: **DONE** — audit/su79_crosscheck.py, from scratch,
+- (e) independence: **DONE**: audit/su79_crosscheck.py, from scratch,
   exact arithmetic, disjoint algorithms (plain-Gaussian det vs Bareiss,
   degree-sliced index-tuple engine vs exponent-vector engine, own parser
   cross-validated against sympy), checkpoint agreement term-by-term,
