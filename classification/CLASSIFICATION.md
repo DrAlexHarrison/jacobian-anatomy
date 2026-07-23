@@ -19,6 +19,18 @@ attains the minimal possible degree within its symmetry class.
   supports; the enumeration of weight systems and supports is part of the
   artifact (scripts/enumerate.py, scripts/families_deg6.json).
 
+## Related work
+
+Shaska, "Graded Keller maps and the Jacobian Conjecture" (arXiv
+2607.20210), classifies graded Keller maps by weight signature: with all
+weights of one sign an equivariant Keller map is an automorphism in every
+dimension, and in dimension two every signature gives an automorphism,
+both at unbounded degree; the paper proposes classifying equivariant maps
+by signature in general. The present classification is the complementary
+exhaustive case: dimension three, all signatures, total degree ≤ 6,
+decided family by family. The mixed-sign region those theorems leave open
+is exactly where the 371 classes below live.
+
 ## Evidence
 
 The enumeration yields 864 families. 123 fall to structural lemmas

@@ -325,7 +325,11 @@ of its class.
 
 - **Minimality of the counterexample within its symmetry class** (v1.2): no C*-equivariant Keller map of total degree
  ≤ 6 in C³ (canonical matched weights) fails injectivity. The mechanism
- needs degree 7. Scope and evidence: `classification/CLASSIFICATION.md`
+ needs degree 7. Complementary and independent: Shaska (arXiv 2607.20210)
+ proves positive-weight equivariant Keller maps are automorphisms in every
+ dimension, and all signatures in dimension two, at unbounded degree, and
+ proposes the classification-by-signature program of which the degree ≤ 6,
+ dimension-3 case is carried out in `classification/`. Scope and evidence: `classification/CLASSIFICATION.md`
  (371 isomorphism classes: 365 by direct Gröbner certificates, 6 by
  hand theorems; zero non-unit collision certificates anywhere;
  the non-equivariant degree ≤ 6 question remains open).
