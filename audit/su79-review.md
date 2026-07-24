@@ -145,7 +145,7 @@ type µ) is WRONG as written: the isotypic types occurring in Q_elt^k are
 pair satisfies the MC conclusion vacuously and can never witness failure.
 The k-independent detectable type exists only after the Cartan twist
 L = f ⊗ ξ ∈ A' ∗ A(τ) with a Baire-generic ξ (Mathieu Prop 2.2), which
-PROGRAM.md §4 omits entirely and §5's obstruction table sidesteps ("the
+PROGRAM.md §4 omits and §5's obstruction table sidesteps ("the
 counterexample runs the contrapositive and bypasses it"); you cannot both
 bypass the machinery and keep the word "explicit". Correct claim: MC(SU(79))
 is false, hence a violating K-finite pair EXISTS; an explicit pair would

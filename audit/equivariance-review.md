@@ -16,7 +16,7 @@ equivariance claim-set and the later-added sheet-parametrization claims.
 
 1. **Equivariance identity** `F(t·x, t⁻¹y, t⁻²z) = (t⁻²F₁, t⁻¹F₂, tF₃)` holds
    identically as a Laurent-polynomial identity in t, valid for every t ∈ C*,
-   not just sampled values.
+   not sampled values.
 
 2. **The weights are forced.** Requiring each component of F to be
    quasi-homogeneous for unknown weights (p,q,r) yields a linear system on the
@@ -138,7 +138,7 @@ symbolic, written from scratch; no reuse of verify/03 or verify/04).
 5. **Γ = triple-root locus, both directions** (P5): over Γ(t) the cubic is
    the perfect cube (8/27t²)(r − 3t/2)³, and coefficient-matching
    C = 2a(r − ρ)³ solves uniquely to Γ(2ρ/3). So "fiber empty ⟺ all sheets
-   walled simultaneously ⟺ q ∈ Γ" is now structural, not just sampled.
+   walled simultaneously ⟺ q ∈ Γ" is now structural, not sampled.
 
 ## The lifting law: exact statement, and a complete proof from the verified identities
 

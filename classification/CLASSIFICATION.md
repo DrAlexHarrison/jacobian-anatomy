@@ -111,7 +111,7 @@ claimed.
   nonzero and coincident roots is decided by Gröbner certificates; the
   written chain stops at a relation system.
 - Two early runs failed from machine memory pressure and were re-run
-  cleanly; the affected log lines in hardfamily/ are annotated
+  and completed; the affected log lines in hardfamily/ are annotated
   RESOURCE-UNDECIDED.
 - Three long-budget certificates for PROOFS.md §3 branches already
   closed by other routes were left running: one finished (unit), two

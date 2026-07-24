@@ -69,7 +69,7 @@ Collision transport per step: point p ↦ (p, −P(p), −Q(p)); common image
 F₁ = X + H₂ + H₃ on C³⁹ has identity linear part and H-terms only of
 degrees 2 and 3.
 
-**Symbolic Keller proof** (not just spot-checks): det J F₁ ≡ 1 is proved
+**Symbolic Keller proof**: det J F₁ ≡ 1 is proved
 mechanically by replaying the 18 gadgets backwards as exact column
 eliminations: for each step, col_j −= (∂P/∂X_j)·col_a + (∂Q/∂X_j)·col_b
 turns rows a, b into unit rows (asserted symbolically; the product rule

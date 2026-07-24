@@ -49,7 +49,7 @@ precision edits. Nothing requires structural revision.
 
 ## (a) The image characterization: SOUND, with one certificate gap
 
-- **Γ-missed half: fully proved, twice over.** (i) Groebner unit certificate
+- **Γ-missed half: proved twice.** (i) Groebner unit certificate
   at Γ(1) + equivariance transport (+ re-certs at Γ(2), Γ(−1/3));
   (ii) the identity route now in `verify/06`: I_x ≡ 0 plus D|_Γ = 0 and
   (4−3bc)|_Γ = 0 forces −2t = 0 at any hypothetical preimage. Route (ii) is
@@ -221,7 +221,7 @@ claim (including three Γ-points and 14 stratum-spanning fiber counts);
 equality of disc classes between the r- and x-presentations; the rigidity
 uniqueness (via Groebner, checking sympy's solver didn't silently drop
 solutions); the char-2 collision arithmetic; the negative controls' ability
-to actually detect breaks (reran, all detected); every arXiv/book citation I
+to detect breaks (reran, all detected); every arXiv/book citation I
 could reach, including the two easiest to have gotten wrong, the (72,108)
 frontier and the Pinchuk degree-6 parenthetical, both of which the note
 states exactly correctly.

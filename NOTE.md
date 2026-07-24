@@ -351,7 +351,7 @@ of its class.
  for n = 1 a proof has been *claimed* by Zheglov (arXiv 2410.06959,
  under review since 2024; v5 Jan 2026), if it stands, the Dixmier family
  splits: **true for n = 1, open for n = 2, false for n ≥ 3**. For DC₂ one
- live transfer leg each way remains: DC₂ ⇒ JC₂ and JC₂ ⇒ DC₁; the
+ open transfer leg each way remains: DC₂ ⇒ JC₂ and JC₂ ⇒ DC₁; the
  classical JC₄ ⇒ DC₂ leg of the Tsuchimoto / Belov-Kanel–Kontsevich stable
  equivalence is now vacuous. Alpöge has publicly concurred with the
  Dixmier/Poisson consequence in the announcement thread.
@@ -389,7 +389,7 @@ of its class.
  report and an independent from-scratch verifier (term-by-term agreement,
  disjoint algorithms) are `audit/su79-review.md` and
  `audit/su79_crosscheck.py`. The bridge is cited Mathieu-primary
- (Prop 2.2(ii) + Cor 1.3/1.7): review found a genuine proof gap at
+ (Prop 2.2(ii) + Cor 1.3/1.7): review found a proof gap at
  the fixed-ξ step of Zwart's Thm 4.23 (the theorem survives via Mathieu's
  Baire-generic ξ; details in the report). Consequence: a violating
  finite-type pair (f, g) on SU(79) **exists**; writing one explicitly
@@ -488,7 +488,7 @@ the program §9 proposes.)
 
 1. **Minimal degree in dimension 3.** This map has degree 7; degree 2 is
  impossible (Wang, J. Algebra 65 (1980)). Do counterexamples of
- degree 3–6 exist? The terrain is genuinely open: even the general
+ degree 3–6 exist? The terrain is open: even the general
  degree-3 case of JC₃ was never proven: known results cover only special
  families (homogeneous maps in dimension 3, the strongest, by de Bondt–van
  den Essen 2005 cited above; gradient maps in dimension ≤ 3; symmetric
